@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-01T21:01:07.154877+00:00",
+  "generated_at": "2026-09-01T23:18:19.024587+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -36,15 +36,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 28.5,
+        "score": 28.7,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 18.7,
-        "forecast_24h_mm": 7.4,
+        "forecast_72h_mm": 18.9,
+        "forecast_24h_mm": 7.5,
         "antecedent_72h_mm": 16.4,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.05
       }
     },
     {
@@ -53,7 +53,7 @@
       "lat": 19.0825,
       "lon": 72.842,
       "predictive_risk": {
-        "score": 42.1,
+        "score": 42.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,9 +65,9 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 17.9,
-        "forecast_24h_mm": 8.9,
-        "antecedent_72h_mm": 13.2,
+        "forecast_72h_mm": 18.2,
+        "forecast_24h_mm": 8.7,
+        "antecedent_72h_mm": 13.5,
         "current_hour_mm": 0.1,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -78,7 +78,7 @@
       "lat": 19.1197,
       "lon": 72.8468,
       "predictive_risk": {
-        "score": 40.1,
+        "score": 40.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,20 +90,20 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 17.9,
-        "forecast_24h_mm": 8.9,
-        "antecedent_72h_mm": 13.2,
+        "forecast_72h_mm": 18.2,
+        "forecast_24h_mm": 8.7,
+        "antecedent_72h_mm": 13.5,
         "current_hour_mm": 0.1,
         "trend_3h_mm_per_hr": 0.0
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-04",
-      "ward_name": "Sion Circle",
-      "lat": 19.043,
-      "lon": 72.8615,
+      "ward_id": "PLACEHOLDER-MUM-10",
+      "ward_name": "Hindustan Naka (Kandivali)",
+      "lat": 19.2003,
+      "lon": 72.8526,
       "predictive_risk": {
-        "score": 38.7,
+        "score": 29.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -111,15 +111,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 25.5,
-        "band": "moderate"
+        "score": 18.1,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 18.7,
-        "forecast_24h_mm": 7.4,
-        "antecedent_72h_mm": 16.4,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "forecast_72h_mm": 18.3,
+        "forecast_24h_mm": 8.4,
+        "antecedent_72h_mm": 21.6,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
       }
     }
   ]
