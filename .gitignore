@@ -1,0 +1,12 @@
+# Backend logic and raw reference data stay local-only for now.
+# Only docs/ (the published prediction output + static site) is meant to be committed.
+/src/
+/data/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# If you later decide to publish the ward reference data or scoring code,
+# remove the relevant line above and commit it deliberately.

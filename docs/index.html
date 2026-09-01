@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chennai Flood Risk — Community Dashboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <h1>Chennai Flood Risk</h1>
+    <div class="updated" id="updated-at">Loading latest data&hellip;</div>
+  </div>
+  <p class="subtitle">Independent, ward-wise monsoon risk indicators — built from open forecast and historical flood data.</p>
+</header>
+
+<div class="disclaimer" id="disclaimer">
+  This is an unofficial community project, not a government warning system. For official alerts, follow
+  <a href="https://sachet.ndma.gov.in/" target="_blank" rel="noopener">NDMA SACHET</a>, IMD, and Greater Chennai Corporation channels.
+  Scores are risk indicators to help you decide when to pay closer attention — they are not evacuation orders.
+</div>
+
+<main class="layout">
+  <section class="map-panel">
+    <div id="map"></div>
+    <div class="legend">
+      <span class="legend-item"><i class="dot low"></i>Low</span>
+      <span class="legend-item"><i class="dot moderate"></i>Moderate</span>
+      <span class="legend-item"><i class="dot high"></i>High</span>
+      <span class="legend-item"><i class="dot severe"></i>Severe</span>
+    </div>
+  </section>
+
+  <section class="list-panel">
+    <div class="list-header">
+      <span>Area</span>
+      <span>Predictive (72h)</span>
+      <span>Right now</span>
+    </div>
+    <div id="ward-list"></div>
+  </section>
+</main>
+
+<section class="report-panel">
+  <h2>Report what you're seeing</h2>
+  <p class="report-intro">Unverified citizen reports, shown as counts alongside the computed scores above. One report per area every 15 minutes per device.</p>
+
+  <label class="report-label" for="report-ward">Your area</label>
+  <select id="report-ward">
+    <option value="">Select your area&hellip;</option>
+  </select>
+
+  <div class="report-group">
+    <span class="report-label">Compare to the prediction above</span>
+    <div class="button-row" data-field="calibration">
+      <button type="button" data-value="matches">Matches</button>
+      <button type="button" data-value="worse">Worse than shown</button>
+      <button type="button" data-value="better">Better than shown</button>
+    </div>
+  </div>
+
+  <div class="report-group">
+    <span class="report-label">Current water level</span>
+    <div class="button-row" data-field="water_level">
+      <button type="button" data-value="dry">Dry</button>
+      <button type="button" data-value="ankle">Ankle</button>
+      <button type="button" data-value="knee">Knee</button>
+      <button type="button" data-value="waist_plus">Waist or higher</button>
+    </div>
+  </div>
+
+  <div class="report-group">
+    <span class="report-label">Trend</span>
+    <div class="button-row" data-field="trend">
+      <button type="button" data-value="rising">Rising</button>
+      <button type="button" data-value="steady">Steady</button>
+      <button type="button" data-value="receding">Receding</button>
+    </div>
+  </div>
+
+  <button type="button" id="submit-report" disabled>Submit report</button>
+  <p id="report-status" class="report-status" role="status"></p>
+</section>
+
+<footer class="site-footer">
+  <div id="sources"></div>
+  <p class="fine-print">Prediction data regenerated periodically on a local pipeline and published here as static JSON. Methodology weights are still being calibrated against 2015 / 2021 / 2023 flood records — treat scores as directional, not exact. Source & data-source citations in the repository README.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/supabase-config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
