@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How This Works — Flood Risk Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .doc { max-width: 760px; margin: 2rem auto; padding: 0 1rem 3rem; color: var(--ink); }
+  .doc h1 { color: var(--ink); font-size: 1.5rem; margin-bottom: 0.3rem; }
+  .doc h2 { font-family: 'Archivo', system-ui, sans-serif; font-size: 1.05rem; margin-top: 2rem; }
+  .doc p, .doc li { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
+  .doc a { color: var(--sky); }
+  .doc .back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.85rem; }
+  .doc .callout { background: #FBF3E3; border-left: 3px solid var(--moderate); padding: 0.75rem 1rem; font-size: 0.85rem; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-row"><h1>How this works</h1></div>
+</header>
+
+<div class="doc">
+  <a class="back" href="index.html">&larr; Back to the dashboard</a>
+
+  <p class="callout">
+    This page explains what goes into each score and roughly how the pieces
+    combine. It deliberately does not publish the exact numeric weights and
+    thresholds — those are still being backtested against real flood events
+    (see the project README) and could mislead if taken as precise before
+    that validation is done. What's below is enough to judge whether the
+    logic is reasonable, without a false sense of numeric precision.
+  </p>
+
+  <h2>What goes into a score</h2>
+  <ul>
+    <li><strong>Forecast rainfall (next 72 hours)</strong> — from Open-Meteo, a free blend of open global weather models (GFS, ICON). Not India-specific; the project intends to add IMD data once API access is granted (see README).</li>
+    <li><strong>Recent rainfall (past 72 hours)</strong> — a proxy for how saturated the ground and drains already are before the forecast rain arrives.</li>
+    <li><strong>Ward flood-history</strong> — a static per-area score reflecting how often that area has flooded historically, based on public reporting on past events. This is the least validated input today (see README's "Next steps") and the main thing still being calibrated.</li>
+    <li><strong>Citizen reports</strong> — residents can report current water level, trend, and whether conditions match the shown score. These are shown as counts next to the map, and once a report is confirmed by several other residents (see "Fact-checking" below), it applies a small, capped adjustment to the displayed score.</li>
+  </ul>
+
+  <h2>How the two scores are shaped</h2>
+  <p>
+    <strong>72h predictive risk</strong> rises with forecast rainfall relative
+    to a saturation threshold — the point past which an area's drainage is
+    considered overwhelmed. That threshold isn't fixed: the shape of the
+    forecast (a short intense burst vs. rain spread evenly over days) picks
+    a different threshold, because a burst overwhelms drains at a much
+    lower total volume than the same rain spread over 72 hours. Antecedent
+    rainfall and the ward's flood-history score both raise or lower this
+    further.
+  </p>
+  <p>
+    <strong>Right-now severity</strong> is driven by the current hour's
+    rainfall intensity and its short-term trend (rising vs. receding),
+    combined with the same ward flood-history factor.
+  </p>
+  <p>
+    Both are a simple weighted combination of these inputs — not a trained
+    model, not reinforcement learning. That's a deliberate choice: there
+    isn't yet enough labeled historical outcome data to train or safely
+    evaluate a learned model for this, and a fixed, inspectable formula is
+    easier to audit, explain, and correct than a black box would be. The
+    project's own research review (README, "Research this draws from") found
+    that even full machine-learning pipelines on this kind of problem
+    plateau around R²≈0.86 — added model complexity without validated data
+    isn't a reliable path to better accuracy here.
+  </p>
+
+  <h2>Fact-checking citizen reports</h2>
+  <p>
+    Anyone can confirm or dispute an individual recent report. Once a
+    report (or a ward's cluster of reports in the last 2 hours) has enough
+    independent confirmations to outweigh a single device's report or a
+    single vote, a fixed, capped adjustment is applied to the displayed
+    predictive score — shown explicitly as "adjusted" next to the base
+    score, never silently. This adjustment is a flat, documented amount,
+    not a learned weight, and is capped in both directions so a burst of
+    reports can't swing the shown score arbitrarily far from the model's
+    own estimate.
+  </p>
+  <p>
+    This is a first version. It does not yet auto-filter which reports
+    count toward the area-wide summary shown on the map — that's a
+    deliberate choice until there's enough real vote volume to tell whether
+    automatic filtering actually improves accuracy rather than just adding
+    another unvalidated layer on top of an unvalidated formula.
+  </p>
+
+  <h2>What this is not</h2>
+  <p>
+    Not an official warning system, not a replacement for IMD, NDMA SACHET,
+    or your city's disaster management authority. Not a precise prediction
+    — treat every score as a directional risk indicator, a reason to pay
+    closer attention, not an instruction to evacuate or stay.
+  </p>
+</div>
+</body>
+</html>

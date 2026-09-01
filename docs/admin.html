@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Flood Risk Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <h1>Admin</h1>
+    <div id="auth-status" class="updated"></div>
+  </div>
+  <p class="subtitle">Signed-in-only controls. Every write here is also enforced server-side by RLS — this UI is convenience, not the actual security boundary.</p>
+</header>
+
+<div id="signin-panel" class="admin-panel">
+  <p>Sign in with the GitHub account that's been added to the <code>admins</code> table.</p>
+  <button type="button" id="github-signin">Sign in with GitHub</button>
+  <p id="signin-note" class="fine-print"></p>
+</div>
+
+<div id="admin-app" class="admin-panel" hidden>
+  <nav class="admin-tabs">
+    <button type="button" class="tab-btn active" data-tab="site">Site settings</button>
+    <button type="button" class="tab-btn" data-tab="scoring">Scoring config</button>
+    <button type="button" class="tab-btn" data-tab="moderation">Report moderation</button>
+    <button type="button" class="tab-btn" data-tab="factcheck">Fact-check overview</button>
+    <button type="button" id="signout-btn">Sign out</button>
+  </nav>
+
+  <section class="tab-panel" data-tab="site">
+    <h2>Site settings</h2>
+    <label class="report-label" for="bmc-url">Buy Me a Coffee URL</label>
+    <input type="url" id="bmc-url" placeholder="https://buymeacoffee.com/yourname">
+    <label class="report-label">
+      <input type="checkbox" id="reports-enabled"> Citizen reports enabled
+    </label>
+    <button type="button" id="save-site-config">Save</button>
+    <p id="site-config-status" class="report-status"></p>
+  </section>
+
+  <section class="tab-panel" data-tab="scoring" hidden>
+    <h2>Scoring config</h2>
+    <label class="report-label" for="scoring-city-select">City</label>
+    <select id="scoring-city-select"></select>
+    <div id="scoring-form"></div>
+    <button type="button" id="save-scoring-config">Save</button>
+    <p id="scoring-config-status" class="report-status"></p>
+    <p class="fine-print">Takes effect on the next hourly pipeline run, not instantly.</p>
+  </section>
+
+  <section class="tab-panel" data-tab="moderation" hidden>
+    <h2>Report moderation</h2>
+    <p class="report-intro">Raw reports from the last 24 hours, across all cities. Only visible here — never to the public.</p>
+    <div id="moderation-list"></div>
+  </section>
+
+  <section class="tab-panel" data-tab="factcheck" hidden>
+    <h2>Fact-check overview</h2>
+    <p class="report-intro">Reports with disputes at or above confirmations, flagged for a human look.</p>
+    <div id="factcheck-list"></div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/supabase-config.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

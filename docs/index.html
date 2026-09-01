@@ -13,16 +13,21 @@
 
 <header class="site-header">
   <div class="header-row">
-    <h1>Chennai Flood Risk</h1>
-    <div class="updated" id="updated-at">Loading latest data&hellip;</div>
+    <h1 id="page-title">Chennai Flood Risk</h1>
+    <div class="header-meta">
+      <select id="city-select" aria-label="Choose a city"></select>
+      <span class="visitor-count" id="visitor-count" title="People with this page open right now"></span>
+      <div class="updated" id="updated-at">Loading latest data&hellip;</div>
+    </div>
   </div>
   <p class="subtitle">Independent, ward-wise monsoon risk indicators — built from open forecast and historical flood data.</p>
 </header>
 
 <div class="disclaimer" id="disclaimer">
   This is an unofficial community project, not a government warning system. For official alerts, follow
-  <a href="https://sachet.ndma.gov.in/" target="_blank" rel="noopener">NDMA SACHET</a>, IMD, and Greater Chennai Corporation channels.
+  <a href="https://sachet.ndma.gov.in/" target="_blank" rel="noopener">NDMA SACHET</a>, IMD, and your city's municipal authority.
   Scores are risk indicators to help you decide when to pay closer attention — they are not evacuation orders.
+  <a href="methodology.html">How this works &rarr;</a>
 </div>
 
 <main class="layout">
@@ -46,7 +51,13 @@
   </section>
 </main>
 
-<section class="report-panel">
+<section class="verify-panel">
+  <h2>Recent citizen reports</h2>
+  <p class="report-intro">Anonymous, unverified reports from the last 2 hours. If you're in the area, confirm or dispute what you see — reports with enough confirmations get a bit more weight in the score shown above (details on the <a href="methodology.html">how this works</a> page).</p>
+  <div id="recent-reports-list" class="recent-reports-list"></div>
+</section>
+
+<section class="report-panel" id="report-panel">
   <h2>Report what you're seeing</h2>
   <p class="report-intro">Unverified citizen reports, shown as counts alongside the computed scores above. One report per area every 15 minutes per device.</p>
 
@@ -89,7 +100,12 @@
 
 <footer class="site-footer">
   <div id="sources"></div>
-  <p class="fine-print">Prediction data regenerated periodically on a local pipeline and published here as static JSON. Methodology weights are still being calibrated against 2015 / 2021 / 2023 flood records — treat scores as directional, not exact. Source & data-source citations in the repository README.</p>
+  <p class="fine-print">Prediction data regenerated periodically on a local pipeline and published here as static JSON. Methodology weights are still being calibrated against historical flood records — treat scores as directional, not exact. Source & data-source citations in the repository README.</p>
+  <p class="fine-print footer-links">
+    <a href="methodology.html">How this works</a>
+    <span id="coffee-link-wrap"></span>
+    <a href="admin.html">Admin</a>
+  </p>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

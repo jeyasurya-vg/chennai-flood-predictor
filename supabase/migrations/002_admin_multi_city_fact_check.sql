@@ -1,40 +1,16 @@
--- Flood Risk Dashboard — full schema (fresh-install version)
--- Run this once in a new Supabase project's SQL editor (Project -> SQL Editor -> New query).
---
--- If you're patching an ALREADY-RUNNING project that only has the original
--- ward_reports/ward_reports_summary from the first version of this file,
--- run supabase/migrations/002_admin_multi_city_fact_check.sql instead —
--- this file assumes a clean database.
---
--- Design intent:
---   * Anyone can INSERT a report (no login required) — but rate-limited to
---     one report per (client, ward) every 15 minutes, enforced server-side.
---   * Nobody can SELECT the raw ward_reports table directly — the public
---     only sees aggregated counts (ward_reports_summary) and an anonymized
---     recent-reports feed (ward_reports_recent, no client_id). This avoids
---     exposing per-submission identifiers and makes the data much less
---     useful to scrape or manipulate precisely.
---   * scoring_config is deliberately NOT anon-readable — that's the private
---     methodology. Only the pipeline (via service_role, bypassing RLS) and
---     an authenticated admin can read/write it.
---   * This schema is safe to commit publicly. It contains no scoring logic
---     or ward vulnerability data — just the shape of what's collected, how
---     abuse is limited, and how admin access is gated.
-
-create extension if not exists pgcrypto;
+-- Migration 002: admin panel, multi-city, fact-check voting, page_views.
+-- Run this in the SQL editor of the EXISTING project that already has
+-- ward_reports / ward_reports_summary / can_submit_report from the
+-- original schema.sql + migration 001 (the insert-grant + security
+-- definer rate-limit fix from earlier). Safe to re-run (idempotent).
 
 -- ============================================================ admins ====
--- Membership table instead of a hardcoded UUID in every policy, so adding
--- a second admin later is one insert, not a schema change.
 create table if not exists admins (
   id uuid primary key references auth.users(id) on delete cascade
 );
-
 alter table admins enable row level security;
 grant select on admins to authenticated;
--- No anon grant at all. RLS below still gates which rows an authenticated
--- (but non-admin) user can actually see — the grant alone would return
--- zero rows for them, not their neighbor's admin status.
+
 create or replace function is_admin()
 returns boolean
 language sql
@@ -44,44 +20,42 @@ as $$
   select exists (select 1 from admins where id = auth.uid());
 $$;
 
+drop policy if exists "admins_self_read" on admins;
 create policy "admins_self_read" on admins for select to authenticated using (is_admin());
 
 -- ======================================================== site_config ===
--- Public site settings (Buy Me a Coffee link, feature flags). Public read,
--- admin-only write.
 create table if not exists site_config (
   key text primary key,
   value jsonb not null,
   updated_at timestamptz not null default now()
 );
-
 alter table site_config enable row level security;
 grant select on site_config to anon;
 grant select, insert, update, delete on site_config to authenticated;
 
+drop policy if exists "site_config_public_read" on site_config;
 create policy "site_config_public_read" on site_config for select to anon using (true);
 -- Anyone can sign in via the admin page's GitHub button without being an
 -- admin (they just get refused the admin app) — if they then browse the
 -- public site while signed in, they're `authenticated`, not `anon`. This
 -- is public info either way, so let any authenticated session read it too.
+drop policy if exists "site_config_authenticated_read" on site_config;
 create policy "site_config_authenticated_read" on site_config for select to authenticated using (true);
+drop policy if exists "site_config_admin_write" on site_config;
 create policy "site_config_admin_write" on site_config
   for all to authenticated using (is_admin()) with check (is_admin());
 
 -- ===================================================== scoring_config ===
--- Per-city tunable scoring weights/thresholds. NOT anon-readable — this is
--- the private methodology. Pipeline reads it with service_role (bypasses
--- RLS entirely); admin reads/writes it via RLS below.
 create table if not exists scoring_config (
   city_id text primary key,
   config jsonb not null,
   updated_at timestamptz not null default now()
 );
-
 alter table scoring_config enable row level security;
 grant select, insert, update, delete on scoring_config to authenticated;
--- Deliberately no grant to anon at all.
+-- Deliberately no grant to anon.
 
+drop policy if exists "scoring_config_admin_only" on scoring_config;
 create policy "scoring_config_admin_only" on scoring_config
   for all to authenticated using (is_admin()) with check (is_admin());
 
@@ -91,9 +65,10 @@ create table if not exists blocked_clients (
   reason text,
   blocked_at timestamptz not null default now()
 );
-
 alter table blocked_clients enable row level security;
 grant select, insert, update, delete on blocked_clients to authenticated;
+
+drop policy if exists "blocked_clients_admin_only" on blocked_clients;
 create policy "blocked_clients_admin_only" on blocked_clients
   for all to authenticated using (is_admin()) with check (is_admin());
 
@@ -106,43 +81,27 @@ as $$
   select exists (select 1 from blocked_clients where client_id = p_client_id);
 $$;
 
--- ======================================================= ward_reports ===
-create table if not exists ward_reports (
-  id uuid primary key default gen_random_uuid(),
-  city_id text not null default 'chennai',
-  ward_id text not null,
-  ward_name text not null,
-  calibration text check (calibration in ('matches', 'worse', 'better')),
-  water_level text check (water_level in ('dry', 'ankle', 'knee', 'waist_plus')),
-  trend text check (trend in ('rising', 'steady', 'receding')),
-  client_id text not null,
-  created_at timestamptz not null default now(),
-  constraint at_least_one_field check (
-    calibration is not null or water_level is not null or trend is not null
-  )
-);
+-- ================================================= ward_reports: city ===
+alter table ward_reports add column if not exists city_id text not null default 'chennai';
 
-create index if not exists ward_reports_ward_time_idx
+drop index if exists ward_reports_ward_time_idx;
+create index if not exists ward_reports_city_ward_time_idx
   on ward_reports (city_id, ward_id, created_at desc);
 
-alter table ward_reports enable row level security;
-
--- RLS policies only take effect on top of a table-level grant — without
--- this, PostgREST rejects every anon insert with 42501 before any policy
--- is even evaluated.
+grant select, delete on ward_reports to authenticated;
 -- Signed-in sessions persist in localStorage across pages on this origin,
 -- so an admin browsing the public dashboard while logged in makes these
--- same requests as `authenticated`, not `anon` — grant/policy both roles
--- so their own browser doesn't silently break on the public site.
-grant insert on ward_reports to anon, authenticated;
-grant select, delete on ward_reports to authenticated;
+-- same requests as `authenticated`, not `anon` — grant both roles so
+-- their own browser doesn't silently break on the public site.
+grant insert on ward_reports to authenticated;
 
--- The rate-limit check needs to see prior rows to enforce anything, but
--- anon has no SELECT access to this table — a plain subquery in WITH CHECK
--- would see an empty table via RLS and always pass, silently disabling the
--- limit. security definer runs with the function owner's privileges,
--- bypassing RLS for this internal check only, without granting anon a
--- general read path.
+-- Replace the rate-limit function: old signature was
+-- can_submit_report(p_client_id text, p_ward_id text). Drop the policy
+-- that depends on it first, then the function, then recreate both with
+-- the new city-aware + blocklist-aware signature.
+drop policy if exists "rate_limited_public_insert" on ward_reports;
+drop function if exists can_submit_report(text, text);
+
 create or replace function can_submit_report(p_client_id text, p_city_id text, p_ward_id text)
 returns boolean
 language sql
@@ -164,11 +123,13 @@ create policy "rate_limited_public_insert"
   to anon, authenticated
   with check (can_submit_report(client_id, city_id, ward_id));
 
--- Admin moderation: full read + delete on the raw table. The public never
--- gets this — only ward_reports_summary and ward_reports_recent below.
+drop policy if exists "ward_reports_admin_read" on ward_reports;
 create policy "ward_reports_admin_read" on ward_reports for select to authenticated using (is_admin());
+drop policy if exists "ward_reports_admin_delete" on ward_reports;
 create policy "ward_reports_admin_delete" on ward_reports for delete to authenticated using (is_admin());
 
+-- ward_reports_summary needs city_id in its grouping — drop and recreate.
+drop view if exists ward_reports_summary;
 create view ward_reports_summary
 with (security_invoker = false)
 as
@@ -188,9 +149,7 @@ group by city_id, ward_id, ward_name;
 
 grant select on ward_reports_summary to anon, authenticated;
 
--- Anonymized recent-reports feed (no client_id) — what the public fact-
--- check UI shows and lets people vote on.
-create view ward_reports_recent
+create or replace view ward_reports_recent
 with (security_invoker = false)
 as
 select id, city_id, ward_id, ward_name, calibration, water_level, trend, created_at
@@ -200,7 +159,6 @@ where created_at > now() - interval '2 hours';
 grant select on ward_reports_recent to anon, authenticated;
 
 -- ================================================ report_confirmations ==
--- Fact-check layer: residents confirm/dispute an individual report.
 create table if not exists report_confirmations (
   id uuid primary key default gen_random_uuid(),
   report_id uuid not null references ward_reports(id) on delete cascade,
@@ -209,13 +167,10 @@ create table if not exists report_confirmations (
   created_at timestamptz not null default now(),
   unique (report_id, client_id)
 );
-
 alter table report_confirmations enable row level security;
 grant insert on report_confirmations to anon, authenticated;
 grant select, delete on report_confirmations to authenticated;
 
--- Same RLS-visibility problem as can_submit_report: needs to check the
--- report's own author without anon SELECT access to ward_reports.
 create or replace function can_vote_on_report(p_report_id uuid, p_client_id text)
 returns boolean
 language sql
@@ -229,16 +184,19 @@ as $$
     );
 $$;
 
+drop policy if exists "rate_limited_public_vote" on report_confirmations;
 create policy "rate_limited_public_vote"
   on report_confirmations
   for insert
   to anon, authenticated
   with check (can_vote_on_report(report_id, client_id));
 
+drop policy if exists "report_confirmations_admin_read" on report_confirmations;
 create policy "report_confirmations_admin_read" on report_confirmations for select to authenticated using (is_admin());
+drop policy if exists "report_confirmations_admin_delete" on report_confirmations;
 create policy "report_confirmations_admin_delete" on report_confirmations for delete to authenticated using (is_admin());
 
-create view report_confirmation_summary
+create or replace view report_confirmation_summary
 with (security_invoker = false)
 as
 select
@@ -252,15 +210,14 @@ grant select on report_confirmation_summary to anon;
 grant select on report_confirmation_summary to authenticated;
 
 -- =================================================== page_views (v1) =====
--- Simple fallback visitor counter (total views today), independent of
--- Realtime presence connection limits. One row per UTC day.
 create table if not exists page_views (
   day date primary key default (now()::date),
   views bigint not null default 0
 );
-
 alter table page_views enable row level security;
 grant select on page_views to anon, authenticated;
+
+drop policy if exists "page_views_public_read" on page_views;
 create policy "page_views_public_read" on page_views for select to anon, authenticated using (true);
 
 create or replace function record_page_view()
@@ -275,16 +232,8 @@ $$;
 
 grant execute on function record_page_view() to anon, authenticated;
 
--- --- After running this, verify the intended access shape before going live:
--- 1. anon SELECT on ward_reports directly -> no rows / permission denied.
--- 2. anon SELECT on ward_reports_summary / ward_reports_recent -> works.
--- 3. anon SELECT on scoring_config -> no rows / permission denied, even
---    though it looks like an ordinary table.
--- 4. Insert a report, immediately insert the same (client, ward) again
---    within 15 minutes -> second insert rejected.
--- 5. Insert a report, vote confirm/dispute on it from a different
---    client_id -> works; voting again with the same client_id, or from the
---    report's own client_id -> rejected.
--- 6. Once signed in as the allow-listed GitHub admin (see README), confirm
---    you can read/write site_config and scoring_config and read/delete
---    ward_reports — and that a second, non-admin authenticated user cannot.
+-- --- After running this:
+-- 1. Sign into docs/admin.html once via GitHub to create your auth.users
+--    row, then run:
+--      insert into admins (id) select id from auth.users where email = 'YOUR_GITHUB_EMAIL';
+-- 2. Re-run the verification checklist at the bottom of schema.sql.

@@ -1,0 +1,113 @@
+.admin-panel {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+#signin-panel {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#github-signin,
+#save-site-config,
+#save-scoring-config {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.4rem;
+  background: var(--sky);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.8rem;
+}
+
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+}
+
+.tab-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: #fff;
+}
+
+#signout-btn {
+  margin-left: auto;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.tab-panel { background: var(--panel); border: 1px solid var(--line); padding: 1.1rem 1.25rem; }
+.tab-panel h2 { font-family: 'Archivo', system-ui, sans-serif; font-size: 1.05rem; margin-top: 0; }
+
+#bmc-url, #scoring-city-select {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.scoring-field { margin-bottom: 0.8rem; }
+.scoring-field label { display: block; font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 0.25rem; }
+.scoring-field input {
+  width: 160px;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--line);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+}
+.scoring-field-group {
+  border: 1px solid var(--line);
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.scoring-field-group legend { font-size: 0.82rem; font-weight: 600; padding: 0 0.3rem; }
+
+.moderation-row, .factcheck-row {
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.moderation-row button, .factcheck-row button {
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.moderation-row button.danger:hover { border-color: var(--severe); color: var(--severe); }

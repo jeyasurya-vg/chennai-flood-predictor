@@ -48,6 +48,28 @@ h1 {
   margin: 0 auto;
 }
 
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#city-select {
+  font-family: inherit;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.5rem;
+  background: var(--sky-deep);
+  color: #fff;
+  border: 1px solid #3A4A6B;
+}
+
+.visitor-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: #9FB0CC;
+}
+
 .updated {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.8rem;
@@ -256,6 +278,72 @@ h1 {
   margin-top: 0.15rem;
 }
 
+.feedback-adjustment {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--high);
+  margin-top: 0.15rem;
+}
+
+.verify-panel {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  padding: 1.1rem 1.25rem 1.4rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.verify-panel h2 {
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-size: 1.05rem;
+  margin: 0 0 0.3rem;
+}
+
+.recent-reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.recent-report-card {
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.recent-report-meta { color: var(--ink); }
+
+.recent-report-votes {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vote-btn {
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.vote-btn.confirm:hover { border-color: var(--low); }
+.vote-btn.dispute:hover { border-color: var(--severe); }
+.vote-btn:disabled { cursor: not-allowed; opacity: 0.6; }
+
+.vote-status {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.empty-note {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
 .site-footer {
   max-width: 1100px;
   margin: 1.5rem auto 2rem;
@@ -270,6 +358,8 @@ h1 {
   font-size: 0.78rem;
   margin-top: 0.5rem;
 }
+
+.footer-links { display: flex; gap: 0.3rem; flex-wrap: wrap; }
 
 #sources ul {
   margin: 0.3rem 0 0;
