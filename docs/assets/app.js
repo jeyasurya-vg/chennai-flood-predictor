@@ -17,11 +17,87 @@ const FEEDBACK_ADJUSTMENT_POINTS = 10;
 let wardsData = [];
 let reportSummaryByWard = {};
 let currentCityId = "chennai";
+let currentLangId = "en";
 let cityManifest = [];
+let langManifest = [];
+let translations = {};
 let mapInstance = null;
+let lastMapCenter = { lat: 13.02, lon: 80.2 };
+let lastMapZoom = 11;
 let siteConfig = {};
 let supabaseClient = null;
 let presenceChannel = null;
+
+// ---------- i18n ---------------------------------------------------------
+
+function t(key, vars) {
+  let str = translations[key];
+  if (str === undefined) str = key;
+  if (vars) {
+    Object.keys(vars).forEach((k) => { str = str.replace(`{${k}}`, vars[k]); });
+  }
+  return str;
+}
+
+async function loadLangManifest() {
+  try {
+    const res = await fetch("assets/i18n/index.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("no lang manifest");
+    const list = await res.json();
+    if (Array.isArray(list) && list.length) return list;
+    throw new Error("empty");
+  } catch (err) {
+    return [{ code: "en", name: "English" }];
+  }
+}
+
+async function loadTranslations(langCode) {
+  try {
+    const res = await fetch(`assets/i18n/${langCode}.json`, { cache: "no-store" });
+    if (!res.ok) throw new Error("missing lang file");
+    return await res.json();
+  } catch (err) {
+    return null;
+  }
+}
+
+function pickInitialLanguage(manifest) {
+  const saved = localStorage.getItem("flood_lang");
+  if (saved && manifest.some((l) => l.code === saved)) return saved;
+  const nav = (navigator.language || "en").toLowerCase().split("-")[0];
+  if (manifest.some((l) => l.code === nav)) return nav;
+  return "en";
+}
+
+function populateLangSelect(manifest) {
+  const select = document.getElementById("lang-select");
+  select.innerHTML = manifest.map((l) => `<option value="${l.code}">${l.name}</option>`).join("");
+  select.value = currentLangId;
+  select.addEventListener("change", () => setLanguage(select.value));
+}
+
+function applyStaticTranslations() {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.dataset.i18n;
+    if (translations[key] !== undefined) el.textContent = translations[key];
+  });
+}
+
+async function setLanguage(langCode) {
+  const data = (await loadTranslations(langCode)) || (await loadTranslations("en")) || {};
+  translations = data;
+  currentLangId = langCode;
+  localStorage.setItem("flood_lang", langCode);
+  document.getElementById("html-root").lang = langCode;
+  document.getElementById("html-root").dir = data.dir === "rtl" ? "rtl" : "ltr";
+  applyStaticTranslations();
+
+  if (wardsData.length) {
+    renderMap(wardsData, lastMapCenter, lastMapZoom);
+    renderList(wardsData);
+  }
+  renderRecentReports(currentCityId);
+}
 
 // ---------- Supabase setup (guarded — dashboard still works without it) ----
 
@@ -74,15 +150,67 @@ async function loadCityManifest() {
     if (Array.isArray(list) && list.length) return list;
     throw new Error("empty manifest");
   } catch (err) {
-    return [{ city_id: "chennai", city_name: "Chennai" }];
+    return [{ city_id: "chennai", city_name: "Chennai", map_center: { lat: 13.02, lon: 80.2 } }];
   }
 }
 
-function pickInitialCity(manifest) {
+function nearestCity(lat, lon, manifest) {
+  let best = manifest[0];
+  let bestDist = Infinity;
+  manifest.forEach((c) => {
+    if (!c.map_center) return;
+    const dLat = lat - c.map_center.lat;
+    const dLon = lon - c.map_center.lon;
+    const d = dLat * dLat + dLon * dLon; // squared-distance is fine at city-scale separation
+    if (d < bestDist) { bestDist = d; best = c; }
+  });
+  return best.city_id;
+}
+
+function tryGeolocation() {
+  return new Promise((resolve) => {
+    if (!navigator.geolocation) { resolve(null); return; }
+    const timer = setTimeout(() => resolve(null), 6000);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => { clearTimeout(timer); resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }); },
+      () => { clearTimeout(timer); resolve(null); },
+      { timeout: 5000, maximumAge: 10 * 60 * 1000 }
+    );
+  });
+}
+
+async function tryIpGeolocation() {
+  try {
+    const res = await fetch("https://get.geojs.io/v1/ip/geo.json");
+    if (!res.ok) throw new Error("ip geolocation failed");
+    const data = await res.json();
+    const lat = parseFloat(data.latitude);
+    const lon = parseFloat(data.longitude);
+    if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
+  } catch (err) {
+    console.warn("IP geolocation unavailable:", err);
+  }
+  return null;
+}
+
+async function detectInitialCity(manifest) {
+  const coords = (await tryGeolocation()) || (await tryIpGeolocation());
+  if (!coords) return null;
+  return nearestCity(coords.lat, coords.lon, manifest);
+}
+
+async function determineInitialCity(manifest) {
   const params = new URLSearchParams(window.location.search);
-  const candidates = [params.get("city"), localStorage.getItem("flood_selected_city"), "chennai"];
-  for (const c of candidates) {
-    if (c && manifest.some((m) => m.city_id === c)) return c;
+  const fromQuery = params.get("city");
+  if (fromQuery && manifest.some((m) => m.city_id === fromQuery)) return fromQuery;
+
+  const saved = localStorage.getItem("flood_selected_city");
+  if (saved && manifest.some((m) => m.city_id === saved)) return saved;
+
+  const detected = await detectInitialCity(manifest);
+  if (detected) {
+    localStorage.setItem("flood_selected_city", detected);
+    return detected;
   }
   return manifest[0].city_id;
 }
@@ -148,13 +276,15 @@ function computeFeedbackAdjustment(summary) {
   if (worseRatio > 0.5) {
     return {
       delta: FEEDBACK_ADJUSTMENT_POINTS,
-      label: `${summary.calibration_worse} of ${summary.reports_last_2h} recent reports say worse than shown`,
+      reasonKey: "feedback_reason_worse",
+      vars: { count: summary.calibration_worse, total: summary.reports_last_2h },
     };
   }
   if (betterRatio > 0.5) {
     return {
       delta: -FEEDBACK_ADJUSTMENT_POINTS,
-      label: `${summary.calibration_better} of ${summary.reports_last_2h} recent reports say better than shown`,
+      reasonKey: "feedback_reason_better",
+      vars: { count: summary.calibration_better, total: summary.reports_last_2h },
     };
   }
   return null;
@@ -165,11 +295,9 @@ function adjustedScoreHtml(baseScore, wardId) {
   if (!adj) return { score: baseScore, band: bandFor(baseScore), html: "" };
   const adjustedScore = Math.max(0, Math.min(100, baseScore + adj.delta));
   const adjustedBand = bandFor(adjustedScore);
-  return {
-    score: adjustedScore,
-    band: adjustedBand,
-    html: `<div class="feedback-adjustment">Adjusted to ${adjustedScore.toFixed(0)} (${adjustedBand}) — ${adj.label}</div>`,
-  };
+  const reason = t(adj.reasonKey, adj.vars);
+  const html = `<div class="feedback-adjustment">${t("feedback_adjusted", { score: adjustedScore.toFixed(0), band: t("legend_" + adjustedBand), reason })}</div>`;
+  return { score: adjustedScore, band: adjustedBand, html };
 }
 
 // ---------- Rendering: map, list, sources -----------------------------------
@@ -177,14 +305,16 @@ function adjustedScoreHtml(baseScore, wardId) {
 function reportBadgeHtml(wardId) {
   const summary = reportSummaryByWard[wardId];
   if (!summary || !summary.reports_last_2h) return "";
-  const bits = [`${summary.reports_last_2h} citizen report${summary.reports_last_2h === 1 ? "" : "s"} (2h)`];
-  if (summary.most_reported_water_level) bits.push(`water: ${summary.most_reported_water_level.replace("_", " ")}`);
-  if (summary.most_reported_trend) bits.push(summary.most_reported_trend);
-  if (summary.calibration_worse) bits.push(`${summary.calibration_worse} say worse than shown`);
+  const bits = [t("report_badge_count", { count: summary.reports_last_2h })];
+  if (summary.most_reported_water_level) bits.push(t("report_badge_water", { level: t("water_" + summary.most_reported_water_level) }));
+  if (summary.most_reported_trend) bits.push(t("trend_" + summary.most_reported_trend));
+  if (summary.calibration_worse) bits.push(t("report_badge_worse", { count: summary.calibration_worse }));
   return `<div class="report-badge">${bits.join(" &middot; ")}</div>`;
 }
 
 function renderMap(wards, center, zoom) {
+  lastMapCenter = center;
+  lastMapZoom = zoom || 11;
   if (mapInstance) {
     mapInstance.remove();
     mapInstance = null;
@@ -208,9 +338,9 @@ function renderMap(wards, center, zoom) {
 
     marker.bindPopup(
       `<strong>${w.ward_name}</strong><br>` +
-      `72h predictive risk: ${w.predictive_risk.score} (${w.predictive_risk.band})<br>` +
-      `Pattern: ${w.predictive_risk.pattern_description || w.predictive_risk.rainfall_pattern}<br>` +
-      `Current severity: ${w.realtime_severity.score} (${w.realtime_severity.band})<br>` +
+      `72h predictive risk: ${w.predictive_risk.score} (${t("legend_" + w.predictive_risk.band)})<br>` +
+      `Pattern: ${t("pattern_" + w.predictive_risk.rainfall_pattern) || w.predictive_risk.pattern_description}<br>` +
+      `Current severity: ${w.realtime_severity.score} (${t("legend_" + w.realtime_severity.band)})<br>` +
       `Forecast rain (72h): ${w.raw_inputs.forecast_72h_mm} mm` +
       adjusted.html +
       reportBadgeHtml(w.ward_id)
@@ -233,11 +363,11 @@ function renderList(wards) {
       </div>
       <div class="score-pill">
         <i class="dot" style="background:${BAND_COLORS[w.predictive_risk.band]}"></i>
-        ${w.predictive_risk.score.toFixed(0)} &middot; ${w.predictive_risk.band}
+        ${w.predictive_risk.score.toFixed(0)} &middot; ${t("legend_" + w.predictive_risk.band)}
       </div>
       <div class="score-pill">
         <i class="dot" style="background:${BAND_COLORS[w.realtime_severity.band]}"></i>
-        ${w.realtime_severity.score.toFixed(0)} &middot; ${w.realtime_severity.band}
+        ${w.realtime_severity.score.toFixed(0)} &middot; ${t("legend_" + w.realtime_severity.band)}
       </div>
     </div>
   `;
@@ -292,11 +422,11 @@ async function submitVote(reportId, vote, btn) {
   const card = btn.closest(".recent-report-card");
   if (error) {
     console.warn(error);
-    card.querySelector(".vote-status").textContent = "Couldn't record your vote — you may have already voted on this one.";
+    card.querySelector(".vote-status").textContent = t("vote_error");
     return;
   }
   card.querySelectorAll(".vote-btn").forEach((b) => { b.disabled = true; });
-  card.querySelector(".vote-status").textContent = "Thanks — recorded.";
+  card.querySelector(".vote-status").textContent = t("vote_thanks");
 }
 
 async function renderRecentReports(cityId) {
@@ -311,24 +441,24 @@ async function renderRecentReports(cityId) {
     return;
   }
   if (!reports.length) {
-    container.innerHTML = '<p class="empty-note">No reports in the last 2 hours for this city.</p>';
+    container.innerHTML = `<p class="empty-note">${t("recent_reports_empty")}</p>`;
     return;
   }
 
   container.innerHTML = reports.map((r) => {
     const summary = confirmSummary[r.id] || { confirms: 0, disputes: 0 };
     const bits = [];
-    if (r.calibration) bits.push(r.calibration.replace("_", " "));
-    if (r.water_level) bits.push(`water: ${r.water_level.replace("_", " ")}`);
-    if (r.trend) bits.push(r.trend);
+    if (r.calibration) bits.push(t("calibration_" + r.calibration));
+    if (r.water_level) bits.push(t("report_badge_water", { level: t("water_" + r.water_level) }));
+    if (r.trend) bits.push(t("trend_" + r.trend));
     return `
       <div class="recent-report-card" data-report-id="${r.id}">
         <div class="recent-report-meta">
-          <strong>${r.ward_name}</strong> &middot; ${bits.join(", ") || "report"} &middot; ${timeAgo(r.created_at)}
+          <strong>${r.ward_name}</strong> &middot; ${bits.join(", ")} &middot; ${timeAgo(r.created_at)}
         </div>
         <div class="recent-report-votes">
-          <button type="button" class="vote-btn confirm" data-vote="confirm">Confirm (${summary.confirms})</button>
-          <button type="button" class="vote-btn dispute" data-vote="dispute">Dispute (${summary.disputes})</button>
+          <button type="button" class="vote-btn confirm" data-vote="confirm">${t("vote_confirm")} (${summary.confirms})</button>
+          <button type="button" class="vote-btn dispute" data-vote="dispute">${t("vote_dispute")} (${summary.disputes})</button>
           <span class="vote-status"></span>
         </div>
       </div>`;
@@ -359,7 +489,7 @@ async function loadSiteConfig() {
 function applySiteConfig(cfg) {
   const wrap = document.getElementById("coffee-link-wrap");
   if (cfg.bmc_url) {
-    wrap.innerHTML = `&middot; <a href="${cfg.bmc_url}" target="_blank" rel="noopener">Buy me a coffee</a>`;
+    wrap.innerHTML = `&middot; <a href="${cfg.bmc_url}" target="_blank" rel="noopener" data-i18n="footer_coffee">${t("footer_coffee")}</a>`;
   } else {
     wrap.innerHTML = "";
   }
@@ -367,7 +497,7 @@ function applySiteConfig(cfg) {
   const panel = document.getElementById("report-panel");
   if (cfg.reports_enabled === false) {
     panel.querySelectorAll("button, select").forEach((el) => { el.disabled = true; });
-    document.getElementById("report-status").textContent = "Citizen reports are temporarily disabled by the site admin.";
+    document.getElementById("report-status").textContent = t("reports_disabled");
   }
 }
 
@@ -387,7 +517,7 @@ function setupVisitorPresence() {
   presenceChannel
     .on("presence", { event: "sync" }, () => {
       const count = Object.keys(presenceChannel.presenceState()).length;
-      el.textContent = `${count} viewing now`;
+      el.textContent = `${count} ${t("viewing_now")}`;
     })
     .subscribe(async (status) => {
       if (status === "SUBSCRIBED") {
@@ -418,7 +548,7 @@ async function recordPageView() {
 
 function populateWardSelect(wards) {
   const select = document.getElementById("report-ward");
-  select.innerHTML = '<option value="">Select your area&hellip;</option>';
+  Array.from(select.querySelectorAll('option:not([value=""])')).forEach((o) => o.remove());
   wards.forEach((w) => {
     const opt = document.createElement("option");
     opt.value = w.ward_id;
@@ -459,7 +589,7 @@ function setupReportPanel() {
   wardSelect.addEventListener("change", () => {
     statusEl.textContent = "";
     if (wardSelect.value && isOnCooldown(currentCityId, wardSelect.value)) {
-      statusEl.textContent = "You've already reported for this area recently — thanks. Try again later.";
+      statusEl.textContent = t("report_cooldown");
     }
     updateSubmitState();
   });
@@ -470,12 +600,12 @@ function setupReportPanel() {
     if (!ward) return;
 
     if (isOnCooldown(currentCityId, wardId)) {
-      statusEl.textContent = "You've already reported for this area recently — thanks. Try again later.";
+      statusEl.textContent = t("report_cooldown");
       return;
     }
 
     submitBtn.disabled = true;
-    statusEl.textContent = "Submitting…";
+    statusEl.textContent = t("report_submitting");
 
     const { error } = await supabaseClient.from("ward_reports").insert({
       city_id: currentCityId,
@@ -488,14 +618,14 @@ function setupReportPanel() {
     });
 
     if (error) {
-      statusEl.textContent = "Couldn't submit — please try again in a moment.";
+      statusEl.textContent = t("report_error");
       console.error(error);
       updateSubmitState();
       return;
     }
 
     setCooldown(currentCityId, wardId);
-    statusEl.textContent = "Thanks — recorded.";
+    statusEl.textContent = t("report_thanks");
     document.querySelectorAll(".button-row button.active").forEach((b) => b.classList.remove("active"));
     selectedValues.calibration = null;
     selectedValues.water_level = null;
@@ -512,8 +642,8 @@ async function loadAndRenderCity() {
   try {
     const data = await loadPredictionData(currentCityId);
     wardsData = data.wards;
-    document.getElementById("page-title").textContent = `${data.city_name} Flood Risk`;
-    document.getElementById("updated-at").textContent = `Updated ${formatTime(data.generated_at)}`;
+    document.getElementById("page-title").textContent = `${data.city_name} ${t("title_suffix")}`;
+    document.getElementById("updated-at").textContent = `${t("updated_prefix")} ${formatTime(data.generated_at)}`;
 
     reportSummaryByWard = await loadReportSummary(currentCityId);
 
@@ -523,7 +653,7 @@ async function loadAndRenderCity() {
     populateWardSelect(wardsData);
     renderRecentReports(currentCityId);
   } catch (err) {
-    document.getElementById("updated-at").textContent = "Could not load latest data";
+    document.getElementById("updated-at").textContent = t("load_error");
     console.error(err);
   }
 }
@@ -531,8 +661,16 @@ async function loadAndRenderCity() {
 async function boot() {
   initSupabase();
 
+  langManifest = await loadLangManifest();
+  currentLangId = pickInitialLanguage(langManifest);
+  populateLangSelect(langManifest);
+  translations = (await loadTranslations(currentLangId)) || {};
+  document.getElementById("html-root").lang = currentLangId;
+  document.getElementById("html-root").dir = translations.dir === "rtl" ? "rtl" : "ltr";
+  applyStaticTranslations();
+
   cityManifest = await loadCityManifest();
-  currentCityId = pickInitialCity(cityManifest);
+  currentCityId = await determineInitialCity(cityManifest);
   populateCitySelect(cityManifest);
 
   siteConfig = await loadSiteConfig();
