@@ -1,0 +1,20 @@
+[
+  {
+    "city_id": "chennai",
+    "city_name": "Chennai",
+    "map_center": {
+      "lat": 13.02,
+      "lon": 80.2
+    },
+    "map_zoom": 11
+  },
+  {
+    "city_id": "mumbai",
+    "city_name": "Mumbai",
+    "map_center": {
+      "lat": 19.09,
+      "lon": 72.87
+    },
+    "map_zoom": 11
+  }
+]
