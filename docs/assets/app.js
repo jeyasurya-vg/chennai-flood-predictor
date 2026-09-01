@@ -29,6 +29,7 @@ let lastGeneratedAt = null;
 let siteConfig = {};
 let supabaseClient = null;
 let presenceChannel = null;
+let lastPresenceCount = null;
 
 // ---------- i18n ---------------------------------------------------------
 
@@ -103,6 +104,9 @@ async function setLanguage(langCode) {
   }
   if (lastGeneratedAt) {
     document.getElementById("updated-at").textContent = `${t("updated_prefix")} ${formatTime(lastGeneratedAt)}`;
+  }
+  if (lastPresenceCount !== null) {
+    document.getElementById("visitor-count").textContent = `${lastPresenceCount} ${t("viewing_now")}`;
   }
   renderRecentReports(currentCityId);
 }
@@ -524,8 +528,8 @@ function setupVisitorPresence() {
 
   presenceChannel
     .on("presence", { event: "sync" }, () => {
-      const count = Object.keys(presenceChannel.presenceState()).length;
-      el.textContent = `${count} ${t("viewing_now")}`;
+      lastPresenceCount = Object.keys(presenceChannel.presenceState()).length;
+      el.textContent = `${lastPresenceCount} ${t("viewing_now")}`;
     })
     .subscribe(async (status) => {
       if (status === "SUBSCRIBED") {
