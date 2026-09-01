@@ -24,6 +24,8 @@ let translations = {};
 let mapInstance = null;
 let lastMapCenter = { lat: 13.02, lon: 80.2 };
 let lastMapZoom = 11;
+let lastCityName = null;
+let lastGeneratedAt = null;
 let siteConfig = {};
 let supabaseClient = null;
 let presenceChannel = null;
@@ -95,6 +97,12 @@ async function setLanguage(langCode) {
   if (wardsData.length) {
     renderMap(wardsData, lastMapCenter, lastMapZoom);
     renderList(wardsData);
+  }
+  if (lastCityName) {
+    document.getElementById("page-title").textContent = `${lastCityName} ${t("title_suffix")}`;
+  }
+  if (lastGeneratedAt) {
+    document.getElementById("updated-at").textContent = `${t("updated_prefix")} ${formatTime(lastGeneratedAt)}`;
   }
   renderRecentReports(currentCityId);
 }
@@ -642,6 +650,8 @@ async function loadAndRenderCity() {
   try {
     const data = await loadPredictionData(currentCityId);
     wardsData = data.wards;
+    lastCityName = data.city_name;
+    lastGeneratedAt = data.generated_at;
     document.getElementById("page-title").textContent = `${data.city_name} ${t("title_suffix")}`;
     document.getElementById("updated-at").textContent = `${t("updated_prefix")} ${formatTime(data.generated_at)}`;
 
@@ -668,6 +678,7 @@ async function boot() {
   document.getElementById("html-root").lang = currentLangId;
   document.getElementById("html-root").dir = translations.dir === "rtl" ? "rtl" : "ltr";
   applyStaticTranslations();
+  document.getElementById("updated-at").textContent = t("loading");
 
   cityManifest = await loadCityManifest();
   currentCityId = await determineInitialCity(cityManifest);
