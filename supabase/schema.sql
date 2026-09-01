@@ -33,19 +33,37 @@ create index if not exists ward_reports_ward_time_idx
 
 alter table ward_reports enable row level security;
 
+-- RLS policies only take effect on top of a table-level grant — without
+-- this, PostgREST rejects every anon insert with 42501 before the policy
+-- below is even evaluated.
+grant insert on ward_reports to anon;
+
+-- The rate-limit check below needs to see prior rows to enforce anything,
+-- but anon has no SELECT access to this table (by design, see below) — a
+-- plain subquery in WITH CHECK would see an empty table via RLS and always
+-- pass, silently disabling the limit. security definer runs with the
+-- function owner's privileges, bypassing RLS for this internal check only,
+-- without granting anon a general read path.
+create or replace function can_submit_report(p_client_id text, p_ward_id text)
+returns boolean
+language sql
+security definer
+set search_path = public
+as $$
+  select not exists (
+    select 1 from ward_reports
+    where client_id = p_client_id
+      and ward_id = p_ward_id
+      and created_at > now() - interval '15 minutes'
+  );
+$$;
+
 -- Public can insert, but only one report per (client_id, ward_id) per 15 minutes.
 create policy "rate_limited_public_insert"
   on ward_reports
   for insert
   to anon
-  with check (
-    not exists (
-      select 1 from ward_reports existing
-      where existing.client_id = client_id
-        and existing.ward_id = ward_id
-        and existing.created_at > now() - interval '15 minutes'
-    )
-  );
+  with check (can_submit_report(client_id, ward_id));
 
 -- Deliberately no SELECT policy for anon on the base table — it stays
 -- unreadable to the public. Only the aggregated view below is exposed.
