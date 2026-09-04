@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-04T19:31:38.384954+00:00",
+  "generated_at": "2026-09-04T22:20:44.443362+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -44,7 +44,7 @@
         "forecast_24h_mm": 3.5,
         "antecedent_72h_mm": 10.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.1
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -69,7 +69,7 @@
         "forecast_24h_mm": 2.7,
         "antecedent_72h_mm": 8.2,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.25
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -94,7 +94,7 @@
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 10.8,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -119,7 +119,7 @@
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 10.8,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -144,7 +144,7 @@
         "forecast_24h_mm": 3.5,
         "antecedent_72h_mm": 10.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.1
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -169,7 +169,7 @@
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 9.1,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.1
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -194,7 +194,7 @@
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 9.1,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.1
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -219,7 +219,7 @@
         "forecast_24h_mm": 2.7,
         "antecedent_72h_mm": 8.2,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.25
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -244,7 +244,7 @@
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 10.8,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -268,31 +268,6 @@
         "forecast_72h_mm": 8.4,
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 10.8,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-11",
-      "ward_name": "Vyasarpadi",
-      "lat": 13.1167,
-      "lon": 80.25,
-      "predictive_risk": {
-        "score": 28.5,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
-      },
-      "realtime_severity": {
-        "score": 19.5,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 6.9,
-        "forecast_24h_mm": 1.9,
-        "antecedent_72h_mm": 7.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
