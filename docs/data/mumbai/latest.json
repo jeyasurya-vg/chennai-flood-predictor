@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-04T22:22:08.928864+00:00",
+  "generated_at": "2026-09-05T00:55:43.691900+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,62 +23,62 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-05",
-      "ward_name": "Kurla West",
-      "lat": 19.0728,
-      "lon": 72.8826,
-      "predictive_risk": {
-        "score": 38.9,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.1,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 23.5,
-        "forecast_24h_mm": 10.4,
-        "antecedent_72h_mm": 28.4,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.25
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-06",
-      "ward_name": "Dharavi",
-      "lat": 19.038,
-      "lon": 72.8538,
-      "predictive_risk": {
-        "score": 40.4,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 25.6,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 18.4,
-        "forecast_24h_mm": 7.1,
-        "antecedent_72h_mm": 29.8,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.15
-      }
-    },
-    {
       "ward_id": "PLACEHOLDER-MUM-07",
       "ward_name": "King's Circle (Matunga)",
       "lat": 19.027,
       "lon": 72.857,
       "predictive_risk": {
-        "score": 36.4,
+        "score": 36.5,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 18.9,
+        "forecast_24h_mm": 10.3,
+        "antecedent_72h_mm": 29.9,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.05
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
+      "predictive_risk": {
+        "score": 32.5,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 19.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 18.9,
+        "forecast_24h_mm": 10.3,
+        "antecedent_72h_mm": 29.9,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.05
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-09",
+      "ward_name": "Malad Subway",
+      "lat": 19.1863,
+      "lon": 72.8493,
+      "predictive_risk": {
+        "score": 35.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,61 +90,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 18.4,
-        "forecast_24h_mm": 7.1,
-        "antecedent_72h_mm": 29.8,
+        "forecast_72h_mm": 18.9,
+        "forecast_24h_mm": 10.0,
+        "antecedent_72h_mm": 22.0,
         "current_hour_mm": 0.1,
         "trend_3h_mm_per_hr": -0.15
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-08",
-      "ward_name": "Gandhi Market (Chembur)",
-      "lat": 19.0522,
-      "lon": 72.8994,
-      "predictive_risk": {
-        "score": 32.4,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 19.6,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 18.4,
-        "forecast_24h_mm": 7.1,
-        "antecedent_72h_mm": 29.8,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.15
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-09",
-      "ward_name": "Malad Subway",
-      "lat": 19.1863,
-      "lon": 72.8493,
-      "predictive_risk": {
-        "score": 35.7,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 23.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 21.5,
-        "forecast_24h_mm": 9.6,
-        "antecedent_72h_mm": 21.5,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -161,15 +111,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 18.4,
+        "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 19.9,
-        "forecast_24h_mm": 8.4,
-        "antecedent_72h_mm": 19.2,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.1
+        "forecast_72h_mm": 19.5,
+        "forecast_24h_mm": 10.7,
+        "antecedent_72h_mm": 19.8,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.1
       }
     }
   ]
