@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-06T13:39:06.238133+00:00",
+  "generated_at": "2026-09-06T17:00:48.826979+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.0176,
       "lon": 72.841,
       "predictive_risk": {
-        "score": 43.8,
+        "score": 43.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,165 +36,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 29.4,
+        "score": 28.5,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 15.6,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 27.9,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.2
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-02",
-      "ward_name": "Milan Subway (Santacruz)",
-      "lat": 19.0825,
-      "lon": 72.842,
-      "predictive_risk": {
-        "score": 44.7,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 28.8,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 19.1,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 30.8,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.05
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-03",
-      "ward_name": "Andheri Subway",
-      "lat": 19.1197,
-      "lon": 72.8468,
-      "predictive_risk": {
-        "score": 42.7,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 27.4,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 19.1,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 30.8,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.05
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-04",
-      "ward_name": "Sion Circle",
-      "lat": 19.043,
-      "lon": 72.8615,
-      "predictive_risk": {
-        "score": 39.8,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 26.4,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 15.6,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 27.9,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.2
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-05",
-      "ward_name": "Kurla West",
-      "lat": 19.0728,
-      "lon": 72.8826,
-      "predictive_risk": {
-        "score": 38.7,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.3,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 19.1,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 30.8,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.05
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-06",
-      "ward_name": "Dharavi",
-      "lat": 19.038,
-      "lon": 72.8538,
-      "predictive_risk": {
-        "score": 39.8,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 26.4,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 15.6,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 27.9,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.2
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-07",
-      "ward_name": "King's Circle (Matunga)",
-      "lat": 19.027,
-      "lon": 72.857,
-      "predictive_risk": {
-        "score": 35.8,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 23.4,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 15.6,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 27.9,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.2
+        "forecast_72h_mm": 14.8,
+        "forecast_24h_mm": 5.8,
+        "antecedent_72h_mm": 26.4,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.25
       }
     },
     {
@@ -203,7 +53,7 @@
       "lat": 19.0522,
       "lon": 72.8994,
       "predictive_risk": {
-        "score": 31.8,
+        "score": 31.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -211,15 +61,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 20.4,
+        "score": 19.5,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 15.6,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 27.9,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.2
+        "forecast_72h_mm": 14.8,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 26.1,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -228,7 +78,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 35.6,
+        "score": 35.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -236,15 +86,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 23.3,
+        "score": 22.5,
         "band": "low"
       },
       "raw_inputs": {
         "forecast_72h_mm": 18.7,
-        "forecast_24h_mm": 7.4,
-        "antecedent_72h_mm": 23.0,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.15
+        "forecast_24h_mm": 7.5,
+        "antecedent_72h_mm": 22.7,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -261,15 +111,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 18.2,
+        "score": 18.4,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 17.6,
-        "forecast_24h_mm": 7.5,
-        "antecedent_72h_mm": 23.9,
+        "forecast_72h_mm": 17.3,
+        "forecast_24h_mm": 7.4,
+        "antecedent_72h_mm": 24.3,
         "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": -0.15
+        "trend_3h_mm_per_hr": 0.05
       }
     }
   ]
