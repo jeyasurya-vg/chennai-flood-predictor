@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-06T17:00:48.826979+00:00",
+  "generated_at": "2026-09-06T19:08:53.884054+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-01",
-      "ward_name": "Hindmata (Dadar/Parel)",
-      "lat": 19.0176,
-      "lon": 72.841,
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
       "predictive_risk": {
-        "score": 43.5,
+        "score": 35.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,15 +36,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 28.5,
-        "band": "moderate"
+        "score": 22.7,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 14.8,
-        "forecast_24h_mm": 5.8,
-        "antecedent_72h_mm": 26.4,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.25
+        "forecast_72h_mm": 15.8,
+        "forecast_24h_mm": 6.3,
+        "antecedent_72h_mm": 25.2,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.05
       }
     },
     {
@@ -61,15 +61,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 19.5,
+        "score": 19.7,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 14.8,
-        "forecast_24h_mm": 5.9,
-        "antecedent_72h_mm": 26.1,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.1
+        "forecast_72h_mm": 15.8,
+        "forecast_24h_mm": 6.3,
+        "antecedent_72h_mm": 25.2,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.05
       }
     },
     {
@@ -78,7 +78,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 35.5,
+        "score": 34.9,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,9 +90,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 18.7,
-        "forecast_24h_mm": 7.5,
-        "antecedent_72h_mm": 22.7,
+        "forecast_72h_mm": 14.5,
+        "forecast_24h_mm": 5.4,
+        "antecedent_72h_mm": 22.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -111,15 +111,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 18.4,
+        "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 17.3,
-        "forecast_24h_mm": 7.4,
-        "antecedent_72h_mm": 24.3,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.05
+        "forecast_72h_mm": 17.0,
+        "forecast_24h_mm": 5.7,
+        "antecedent_72h_mm": 24.4,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.1
       }
     }
   ]
