@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-05T23:50:54.784617+00:00",
+  "generated_at": "2026-09-06T04:32:17.948806+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -21,5 +21,156 @@
     }
   ],
   "scoring_config_source": "default",
-  "wards": []
+  "wards": [
+    {
+      "ward_id": "PLACEHOLDER-MUM-05",
+      "ward_name": "Kurla West",
+      "lat": 19.0728,
+      "lon": 72.8826,
+      "predictive_risk": {
+        "score": 37.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 24.0,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 13.0,
+        "forecast_24h_mm": 4.6,
+        "antecedent_72h_mm": 31.2,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.2
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-06",
+      "ward_name": "Dharavi",
+      "lat": 19.038,
+      "lon": 72.8538,
+      "predictive_risk": {
+        "score": 39.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 25.6,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 15.4,
+        "forecast_24h_mm": 6.3,
+        "antecedent_72h_mm": 29.1,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.3
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
+      "predictive_risk": {
+        "score": 35.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.6,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 15.4,
+        "forecast_24h_mm": 6.3,
+        "antecedent_72h_mm": 29.1,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.3
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
+      "predictive_risk": {
+        "score": 31.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 19.6,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 15.4,
+        "forecast_24h_mm": 6.3,
+        "antecedent_72h_mm": 29.1,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.3
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-09",
+      "ward_name": "Malad Subway",
+      "lat": 19.1863,
+      "lon": 72.8493,
+      "predictive_risk": {
+        "score": 35.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.6,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 14.3,
+        "forecast_24h_mm": 3.7,
+        "antecedent_72h_mm": 22.9,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.05
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-10",
+      "ward_name": "Hindustan Naka (Kandivali)",
+      "lat": 19.2003,
+      "lon": 72.8526,
+      "predictive_risk": {
+        "score": 29.5,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 18.2,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 17.8,
+        "forecast_24h_mm": 4.8,
+        "antecedent_72h_mm": 23.2,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    }
+  ]
 }
