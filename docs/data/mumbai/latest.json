@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-07T10:13:49.060762+00:00",
+  "generated_at": "2026-09-07T16:27:48.623721+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,37 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-05",
-      "ward_name": "Kurla West",
-      "lat": 19.0728,
-      "lon": 72.8826,
-      "predictive_risk": {
-        "score": 37.8,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.2,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 14.1,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 29.5,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": -0.1
-      }
-    },
-    {
       "ward_id": "PLACEHOLDER-MUM-06",
       "ward_name": "Dharavi",
       "lat": 19.038,
       "lon": 72.8538,
       "predictive_risk": {
-        "score": 39.2,
+        "score": 39.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,11 +40,11 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 13.5,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 25.4,
+        "forecast_72h_mm": 13.0,
+        "forecast_24h_mm": 4.9,
+        "antecedent_72h_mm": 25.0,
         "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -77,6 +52,56 @@
       "ward_name": "King's Circle (Matunga)",
       "lat": 19.027,
       "lon": 72.857,
+      "predictive_risk": {
+        "score": 35.1,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.6,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 13.0,
+        "forecast_24h_mm": 4.9,
+        "antecedent_72h_mm": 25.0,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
+      "predictive_risk": {
+        "score": 31.1,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 19.6,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 13.0,
+        "forecast_24h_mm": 4.9,
+        "antecedent_72h_mm": 25.0,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-09",
+      "ward_name": "Malad Subway",
+      "lat": 19.1863,
+      "lon": 72.8493,
       "predictive_risk": {
         "score": 35.2,
         "band": "moderate",
@@ -90,61 +115,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 13.5,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 25.4,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.05
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-08",
-      "ward_name": "Gandhi Market (Chembur)",
-      "lat": 19.0522,
-      "lon": 72.8994,
-      "predictive_risk": {
-        "score": 31.2,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 19.6,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 13.5,
-        "forecast_24h_mm": 6.9,
-        "antecedent_72h_mm": 25.4,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.05
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-09",
-      "ward_name": "Malad Subway",
-      "lat": 19.1863,
-      "lon": 72.8493,
-      "predictive_risk": {
-        "score": 35.1,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 22.9,
-        "band": "low"
-      },
-      "raw_inputs": {
         "forecast_72h_mm": 15.4,
-        "forecast_24h_mm": 7.6,
-        "antecedent_72h_mm": 22.9,
-        "current_hour_mm": 0.3,
-        "trend_3h_mm_per_hr": -0.15
+        "forecast_24h_mm": 6.8,
+        "antecedent_72h_mm": 23.7,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -153,7 +128,7 @@
       "lat": 19.2003,
       "lon": 72.8526,
       "predictive_risk": {
-        "score": 29.4,
+        "score": 29.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -165,11 +140,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 15.2,
-        "forecast_24h_mm": 4.6,
-        "antecedent_72h_mm": 25.1,
+        "forecast_72h_mm": 14.5,
+        "forecast_24h_mm": 5.6,
+        "antecedent_72h_mm": 24.7,
         "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": -0.3
+        "trend_3h_mm_per_hr": 0.0
       }
     }
   ]
