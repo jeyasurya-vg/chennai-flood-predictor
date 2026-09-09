@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-09T05:58:05.510546+00:00",
+  "generated_at": "2026-09-09T11:15:28.643701+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 12.9756,
       "lon": 80.2207,
       "predictive_risk": {
-        "score": 43.1,
+        "score": 42.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,8 +40,8 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 12.7,
-        "forecast_24h_mm": 5.4,
+        "forecast_72h_mm": 7.8,
+        "forecast_24h_mm": 4.9,
         "antecedent_72h_mm": 16.8,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -53,7 +53,7 @@
       "lat": 12.9214,
       "lon": 80.1216,
       "predictive_risk": {
-        "score": 39.5,
+        "score": 37.7,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,8 +65,8 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.3,
-        "forecast_24h_mm": 4.2,
+        "forecast_72h_mm": 3.3,
+        "forecast_24h_mm": 0.5,
         "antecedent_72h_mm": 22.5,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -78,7 +78,7 @@
       "lat": 13.021,
       "lon": 80.2437,
       "predictive_risk": {
-        "score": 36.1,
+        "score": 35.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,8 +90,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 4.6,
+        "forecast_72h_mm": 7.6,
+        "forecast_24h_mm": 5.0,
         "antecedent_72h_mm": 11.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -103,7 +103,7 @@
       "lat": 13.021,
       "lon": 80.2226,
       "predictive_risk": {
-        "score": 36.1,
+        "score": 35.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -115,9 +115,109 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 4.6,
+        "forecast_72h_mm": 7.6,
+        "forecast_24h_mm": 5.0,
         "antecedent_72h_mm": 11.4,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-05",
+      "ward_name": "Pallikaranai",
+      "lat": 12.94,
+      "lon": 80.2144,
+      "predictive_risk": {
+        "score": 40.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 27.0,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 7.8,
+        "forecast_24h_mm": 4.9,
+        "antecedent_72h_mm": 16.8,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-06",
+      "ward_name": "Medavakkam",
+      "lat": 12.9166,
+      "lon": 80.1892,
+      "predictive_risk": {
+        "score": 33.5,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 21.0,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 8.7,
+        "forecast_24h_mm": 5.1,
+        "antecedent_72h_mm": 26.7,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-07",
+      "ward_name": "Sholinganallur",
+      "lat": 12.901,
+      "lon": 80.2279,
+      "predictive_risk": {
+        "score": 35.5,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 22.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 8.7,
+        "forecast_24h_mm": 5.1,
+        "antecedent_72h_mm": 26.7,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-08",
+      "ward_name": "Perungalathur",
+      "lat": 12.8998,
+      "lon": 80.0965,
+      "predictive_risk": {
+        "score": 29.7,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 19.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 3.3,
+        "forecast_24h_mm": 0.5,
+        "antecedent_72h_mm": 22.5,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -128,7 +228,7 @@
       "lat": 13.0603,
       "lon": 80.2432,
       "predictive_risk": {
-        "score": 28.1,
+        "score": 27.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -140,8 +240,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 4.6,
+        "forecast_72h_mm": 7.6,
+        "forecast_24h_mm": 5.0,
         "antecedent_72h_mm": 11.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -153,7 +253,7 @@
       "lat": 13.0732,
       "lon": 80.2609,
       "predictive_risk": {
-        "score": 26.1,
+        "score": 25.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -165,8 +265,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 4.6,
+        "forecast_72h_mm": 7.6,
+        "forecast_24h_mm": 5.0,
         "antecedent_72h_mm": 11.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -190,9 +290,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 5.8,
-        "forecast_24h_mm": 3.2,
-        "antecedent_72h_mm": 7.2,
+        "forecast_72h_mm": 5.6,
+        "forecast_24h_mm": 3.4,
+        "antecedent_72h_mm": 7.3,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -203,8 +303,8 @@
       "lat": 13.17,
       "lon": 80.26,
       "predictive_risk": {
-        "score": 25.1,
-        "band": "moderate",
+        "score": 24.9,
+        "band": "low",
         "confidence": "high",
         "horizon_hours": 72,
         "rainfall_pattern": "moderate_monsoon",
@@ -215,9 +315,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 5.8,
-        "forecast_24h_mm": 3.0,
-        "antecedent_72h_mm": 2.8,
+        "forecast_72h_mm": 4.1,
+        "forecast_24h_mm": 2.8,
+        "antecedent_72h_mm": 3.0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
