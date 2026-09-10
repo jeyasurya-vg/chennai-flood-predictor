@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-10T19:37:34.964671+00:00",
+  "generated_at": "2026-09-10T22:31:43.543930+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -44,7 +44,7 @@
         "forecast_24h_mm": 1.6,
         "antecedent_72h_mm": 14.6,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -69,7 +69,7 @@
         "forecast_24h_mm": 0.5,
         "antecedent_72h_mm": 20.5,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -144,7 +144,7 @@
         "forecast_24h_mm": 1.6,
         "antecedent_72h_mm": 14.6,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -219,7 +219,7 @@
         "forecast_24h_mm": 0.5,
         "antecedent_72h_mm": 20.5,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
