@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-10T01:02:07.853273+00:00",
+  "generated_at": "2026-09-10T05:55:46.452715+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -41,10 +41,10 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 5.8,
-        "forecast_24h_mm": 3.1,
+        "forecast_24h_mm": 3.6,
         "antecedent_72h_mm": 14.0,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -66,10 +66,35 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 2.9,
-        "forecast_24h_mm": 2.4,
+        "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 21.3,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.0
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-03",
+      "ward_name": "Kotturpuram",
+      "lat": 13.021,
+      "lon": 80.2437,
+      "predictive_risk": {
+        "score": 33.8,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 24.0,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 3.3,
+        "forecast_24h_mm": 2.3,
+        "antecedent_72h_mm": 10.0,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -90,11 +115,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 3.6,
-        "forecast_24h_mm": 1.8,
-        "antecedent_72h_mm": 9.7,
+        "forecast_72h_mm": 3.3,
+        "forecast_24h_mm": 2.3,
+        "antecedent_72h_mm": 10.0,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -116,10 +141,10 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 5.8,
-        "forecast_24h_mm": 3.1,
+        "forecast_24h_mm": 3.6,
         "antecedent_72h_mm": 14.0,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -141,10 +166,10 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 4.3,
-        "forecast_24h_mm": 2.6,
+        "forecast_24h_mm": 3.2,
         "antecedent_72h_mm": 24.1,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.45
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -166,10 +191,10 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 4.3,
-        "forecast_24h_mm": 2.6,
+        "forecast_24h_mm": 3.2,
         "antecedent_72h_mm": 24.1,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.45
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -191,10 +216,10 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 2.9,
-        "forecast_24h_mm": 2.4,
+        "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 21.3,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.0
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -215,11 +240,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 3.6,
-        "forecast_24h_mm": 1.8,
-        "antecedent_72h_mm": 9.7,
+        "forecast_72h_mm": 3.3,
+        "forecast_24h_mm": 2.3,
+        "antecedent_72h_mm": 10.0,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -240,11 +265,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 3.6,
-        "forecast_24h_mm": 1.8,
-        "antecedent_72h_mm": 9.7,
+        "forecast_72h_mm": 3.3,
+        "forecast_24h_mm": 2.3,
+        "antecedent_72h_mm": 10.0,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": -0.1
       }
     },
     {
@@ -265,36 +290,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 4.2,
-        "forecast_24h_mm": 2.5,
-        "antecedent_72h_mm": 5.8,
+        "forecast_72h_mm": 3.8,
+        "forecast_24h_mm": 2.9,
+        "antecedent_72h_mm": 6.2,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-12",
-      "ward_name": "Manali",
-      "lat": 13.17,
-      "lon": 80.26,
-      "predictive_risk": {
-        "score": 24.6,
-        "band": "low",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 18.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 1.7,
-        "forecast_24h_mm": 0.8,
-        "antecedent_72h_mm": 2.9,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": -0.15
       }
     }
   ]
