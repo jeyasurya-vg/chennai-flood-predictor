@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-11T05:57:01.793453+00:00",
+  "generated_at": "2026-09-11T11:14:53.687559+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-01",
-      "ward_name": "Hindmata (Dadar/Parel)",
-      "lat": 19.0176,
-      "lon": 72.841,
+      "ward_id": "PLACEHOLDER-MUM-06",
+      "ward_name": "Dharavi",
+      "lat": 19.038,
+      "lon": 72.8538,
       "predictive_risk": {
-        "score": 43.9,
+        "score": 44.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,15 +36,40 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 29.5,
+        "score": 25.6,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 28.1,
-        "forecast_24h_mm": 2.1,
-        "antecedent_72h_mm": 16.4,
-        "current_hour_mm": 0.5,
-        "trend_3h_mm_per_hr": 0.2
+        "forecast_72h_mm": 63.0,
+        "forecast_24h_mm": 1.2,
+        "antecedent_72h_mm": 15.5,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
+      "predictive_risk": {
+        "score": 40.5,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.6,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 63.0,
+        "forecast_24h_mm": 1.2,
+        "antecedent_72h_mm": 15.5,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -53,7 +78,7 @@
       "lat": 19.0522,
       "lon": 72.8994,
       "predictive_risk": {
-        "score": 31.9,
+        "score": 36.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -61,15 +86,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 20.5,
+        "score": 19.6,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 28.1,
-        "forecast_24h_mm": 2.1,
-        "antecedent_72h_mm": 16.4,
-        "current_hour_mm": 0.5,
-        "trend_3h_mm_per_hr": 0.2
+        "forecast_72h_mm": 63.0,
+        "forecast_24h_mm": 1.2,
+        "antecedent_72h_mm": 15.5,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -78,7 +103,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 35.3,
+        "score": 40.7,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -86,15 +111,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 22.7,
+        "score": 22.6,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 25.7,
-        "forecast_24h_mm": 1.1,
-        "antecedent_72h_mm": 13.7,
+        "forecast_72h_mm": 67.2,
+        "forecast_24h_mm": 1.7,
+        "antecedent_72h_mm": 12.7,
         "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": 0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -103,7 +128,7 @@
       "lat": 19.2003,
       "lon": 72.8526,
       "predictive_risk": {
-        "score": 29.6,
+        "score": 36.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -115,9 +140,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 28.1,
-        "forecast_24h_mm": 1.9,
-        "antecedent_72h_mm": 13.9,
+        "forecast_72h_mm": 81.7,
+        "forecast_24h_mm": 2.1,
+        "antecedent_72h_mm": 12.6,
         "current_hour_mm": 0.1,
         "trend_3h_mm_per_hr": 0.0
       }
