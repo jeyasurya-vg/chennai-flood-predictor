@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-11T19:40:14.006751+00:00",
+  "generated_at": "2026-09-11T22:31:09.841843+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.0176,
       "lon": 72.841,
       "predictive_risk": {
-        "score": 44.8,
+        "score": 45.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,7 +40,7 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 38.0,
+        "forecast_72h_mm": 39.9,
         "forecast_24h_mm": 2.6,
         "antecedent_72h_mm": 12.8,
         "current_hour_mm": 0.0,
@@ -53,7 +53,7 @@
       "lat": 19.0825,
       "lon": 72.842,
       "predictive_risk": {
-        "score": 45.1,
+        "score": 45.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,8 +65,8 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 44.6,
-        "forecast_24h_mm": 2.2,
+        "forecast_72h_mm": 45.4,
+        "forecast_24h_mm": 2.8,
         "antecedent_72h_mm": 8.3,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -78,7 +78,7 @@
       "lat": 19.1197,
       "lon": 72.8468,
       "predictive_risk": {
-        "score": 43.1,
+        "score": 43.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,9 +90,159 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 44.6,
-        "forecast_24h_mm": 2.2,
+        "forecast_72h_mm": 45.4,
+        "forecast_24h_mm": 2.8,
         "antecedent_72h_mm": 8.3,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-04",
+      "ward_name": "Sion Circle",
+      "lat": 19.043,
+      "lon": 72.8615,
+      "predictive_risk": {
+        "score": 41.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 25.5,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 39.9,
+        "forecast_24h_mm": 2.6,
+        "antecedent_72h_mm": 12.8,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-05",
+      "ward_name": "Kurla West",
+      "lat": 19.0728,
+      "lon": 72.8826,
+      "predictive_risk": {
+        "score": 39.2,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 24.0,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 45.4,
+        "forecast_24h_mm": 2.8,
+        "antecedent_72h_mm": 8.3,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-06",
+      "ward_name": "Dharavi",
+      "lat": 19.038,
+      "lon": 72.8538,
+      "predictive_risk": {
+        "score": 41.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 25.5,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 39.9,
+        "forecast_24h_mm": 2.6,
+        "antecedent_72h_mm": 12.8,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
+      "predictive_risk": {
+        "score": 37.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 39.9,
+        "forecast_24h_mm": 2.6,
+        "antecedent_72h_mm": 12.8,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
+      "predictive_risk": {
+        "score": 33.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 19.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 39.9,
+        "forecast_24h_mm": 2.6,
+        "antecedent_72h_mm": 12.8,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-09",
+      "ward_name": "Malad Subway",
+      "lat": 19.1863,
+      "lon": 72.8493,
+      "predictive_risk": {
+        "score": 38.3,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 22.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 52.4,
+        "forecast_24h_mm": 5.4,
+        "antecedent_72h_mm": 9.6,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -103,7 +253,7 @@
       "lat": 19.2003,
       "lon": 72.8526,
       "predictive_risk": {
-        "score": 32.0,
+        "score": 32.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -115,8 +265,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 50.6,
-        "forecast_24h_mm": 2.5,
+        "forecast_72h_mm": 52.0,
+        "forecast_24h_mm": 4.1,
         "antecedent_72h_mm": 9.3,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
