@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-12T17:07:30.411498+00:00",
+  "generated_at": "2026-09-12T19:20:29.520888+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,8 +28,8 @@
       "lat": 19.0176,
       "lon": 72.841,
       "predictive_risk": {
-        "score": 51.0,
-        "band": "high",
+        "score": 46.4,
+        "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
         "rainfall_pattern": "moderate_monsoon",
@@ -40,45 +40,20 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 89.9,
-        "forecast_24h_mm": 43.7,
-        "antecedent_72h_mm": 7.3,
+        "forecast_72h_mm": 56.1,
+        "forecast_24h_mm": 19.5,
+        "antecedent_72h_mm": 7.2,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-02",
-      "ward_name": "Milan Subway (Santacruz)",
-      "lat": 19.0825,
-      "lon": 72.842,
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
       "predictive_risk": {
-        "score": 51.2,
-        "band": "high",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 28.5,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 92.7,
-        "forecast_24h_mm": 47.5,
-        "antecedent_72h_mm": 6.1,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-03",
-      "ward_name": "Andheri Subway",
-      "lat": 19.1197,
-      "lon": 72.8468,
-      "predictive_risk": {
-        "score": 49.2,
+        "score": 34.4,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -86,24 +61,24 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 27.0,
-        "band": "moderate"
+        "score": 19.5,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 92.7,
-        "forecast_24h_mm": 47.5,
-        "antecedent_72h_mm": 6.1,
+        "forecast_72h_mm": 56.1,
+        "forecast_24h_mm": 19.5,
+        "antecedent_72h_mm": 7.2,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-04",
-      "ward_name": "Sion Circle",
-      "lat": 19.043,
-      "lon": 72.8615,
+      "ward_id": "PLACEHOLDER-MUM-09",
+      "ward_name": "Malad Subway",
+      "lat": 19.1863,
+      "lon": 72.8493,
       "predictive_risk": {
-        "score": 47.0,
+        "score": 39.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -111,15 +86,40 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 25.5,
-        "band": "moderate"
+        "score": 22.9,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 89.9,
-        "forecast_24h_mm": 43.7,
-        "antecedent_72h_mm": 7.3,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 63.6,
+        "forecast_24h_mm": 19.3,
+        "antecedent_72h_mm": 6.2,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.1
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-10",
+      "ward_name": "Hindustan Naka (Kandivali)",
+      "lat": 19.2003,
+      "lon": 72.8526,
+      "predictive_risk": {
+        "score": 33.8,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 19.7,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 66.4,
+        "forecast_24h_mm": 23.4,
+        "antecedent_72h_mm": 7.1,
+        "current_hour_mm": 0.8,
+        "trend_3h_mm_per_hr": 0.35
       }
     }
   ]
