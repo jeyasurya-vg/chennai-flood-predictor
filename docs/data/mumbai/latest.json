@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-12T01:06:22.476480+00:00",
+  "generated_at": "2026-09-12T05:46:52.885742+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-01",
-      "ward_name": "Hindmata (Dadar/Parel)",
-      "lat": 19.0176,
-      "lon": 72.841,
+      "ward_id": "PLACEHOLDER-MUM-06",
+      "ward_name": "Dharavi",
+      "lat": 19.038,
+      "lon": 72.8538,
       "predictive_risk": {
-        "score": 45.1,
+        "score": 41.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,24 +36,24 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 28.5,
+        "score": 25.9,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 40.3,
-        "forecast_24h_mm": 1.7,
-        "antecedent_72h_mm": 12.7,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "forecast_72h_mm": 42.2,
+        "forecast_24h_mm": 1.9,
+        "antecedent_72h_mm": 12.2,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.05
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-02",
-      "ward_name": "Milan Subway (Santacruz)",
-      "lat": 19.0825,
-      "lon": 72.842,
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
       "predictive_risk": {
-        "score": 44.8,
+        "score": 37.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -61,15 +61,40 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 28.9,
-        "band": "moderate"
+        "score": 22.8,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 42.6,
-        "forecast_24h_mm": 1.8,
-        "antecedent_72h_mm": 8.2,
+        "forecast_72h_mm": 42.2,
+        "forecast_24h_mm": 1.9,
+        "antecedent_72h_mm": 12.2,
         "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.1
+        "trend_3h_mm_per_hr": 0.05
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
+      "predictive_risk": {
+        "score": 33.3,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 19.9,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 42.2,
+        "forecast_24h_mm": 1.9,
+        "antecedent_72h_mm": 12.2,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.05
       }
     },
     {
@@ -86,15 +111,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 22.7,
+        "score": 22.6,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 48.7,
-        "forecast_24h_mm": 1.7,
-        "antecedent_72h_mm": 9.2,
+        "forecast_72h_mm": 49.6,
+        "forecast_24h_mm": 1.5,
+        "antecedent_72h_mm": 8.3,
         "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": 0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -111,15 +136,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 18.1,
+        "score": 18.2,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 49.8,
-        "forecast_24h_mm": 3.4,
-        "antecedent_72h_mm": 9.1,
+        "forecast_72h_mm": 50.8,
+        "forecast_24h_mm": 3.3,
+        "antecedent_72h_mm": 8.5,
         "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": 0.05
       }
     }
   ]
