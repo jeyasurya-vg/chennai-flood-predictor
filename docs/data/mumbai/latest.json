@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-20T12:18:18.719429+00:00",
+  "generated_at": "2026-09-20T16:48:31.836497+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.038,
       "lon": 72.8538,
       "predictive_risk": {
-        "score": 36.5,
+        "score": 36.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,9 +40,9 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 2.9,
-        "forecast_24h_mm": 0.5,
-        "antecedent_72h_mm": 16.2,
+        "forecast_72h_mm": 3.6,
+        "forecast_24h_mm": 0.6,
+        "antecedent_72h_mm": 16.0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -53,7 +53,7 @@
       "lat": 19.027,
       "lon": 72.857,
       "predictive_risk": {
-        "score": 32.5,
+        "score": 32.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,9 +65,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 2.9,
-        "forecast_24h_mm": 0.5,
-        "antecedent_72h_mm": 16.2,
+        "forecast_72h_mm": 3.6,
+        "forecast_24h_mm": 0.6,
+        "antecedent_72h_mm": 16.0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -78,7 +78,7 @@
       "lat": 19.0522,
       "lon": 72.8994,
       "predictive_risk": {
-        "score": 28.5,
+        "score": 28.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,9 +90,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 2.9,
-        "forecast_24h_mm": 0.5,
-        "antecedent_72h_mm": 16.2,
+        "forecast_72h_mm": 3.6,
+        "forecast_24h_mm": 0.6,
+        "antecedent_72h_mm": 16.0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -103,21 +103,21 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 32.6,
+        "score": 33.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
         "score": 22.5,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 2.5,
-        "forecast_24h_mm": 0.2,
-        "antecedent_72h_mm": 15.3,
+        "forecast_72h_mm": 7.5,
+        "forecast_24h_mm": 2.4,
+        "antecedent_72h_mm": 15.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -128,7 +128,7 @@
       "lat": 19.2003,
       "lon": 72.8526,
       "predictive_risk": {
-        "score": 26.4,
+        "score": 27.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -136,15 +136,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 18.2,
+        "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 1.7,
-        "forecast_24h_mm": 0.2,
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 0.9,
         "antecedent_72h_mm": 15.2,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": 0.05
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
       }
     }
   ]
