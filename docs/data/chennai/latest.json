@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-20T01:02:55.282998+00:00",
+  "generated_at": "2026-09-20T06:10:08.868256+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 12.9756,
       "lon": 80.2207,
       "predictive_risk": {
-        "score": 47.4,
+        "score": 47.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -42,9 +42,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 34.0,
         "forecast_24h_mm": 23.6,
-        "antecedent_72h_mm": 13.6,
+        "antecedent_72h_mm": 13.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -2.35
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -67,9 +67,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 25.3,
         "forecast_24h_mm": 14.6,
-        "antecedent_72h_mm": 9.9,
+        "antecedent_72h_mm": 9.8,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -2.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -78,7 +78,7 @@
       "lat": 13.021,
       "lon": 80.2437,
       "predictive_risk": {
-        "score": 38.0,
+        "score": 37.9,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -92,9 +92,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 20.3,
         "forecast_24h_mm": 9.3,
-        "antecedent_72h_mm": 11.5,
+        "antecedent_72h_mm": 10.6,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.85
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -103,7 +103,7 @@
       "lat": 13.021,
       "lon": 80.2226,
       "predictive_risk": {
-        "score": 38.0,
+        "score": 37.9,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -117,9 +117,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 20.3,
         "forecast_24h_mm": 9.3,
-        "antecedent_72h_mm": 11.5,
+        "antecedent_72h_mm": 10.6,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.85
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -128,7 +128,7 @@
       "lat": 12.94,
       "lon": 80.2144,
       "predictive_risk": {
-        "score": 45.4,
+        "score": 45.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -142,9 +142,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 34.0,
         "forecast_24h_mm": 23.6,
-        "antecedent_72h_mm": 13.6,
+        "antecedent_72h_mm": 13.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -2.35
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -153,7 +153,7 @@
       "lat": 12.9166,
       "lon": 80.1892,
       "predictive_risk": {
-        "score": 34.4,
+        "score": 34.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -167,9 +167,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 21.6,
         "forecast_24h_mm": 13.1,
-        "antecedent_72h_mm": 11.7,
+        "antecedent_72h_mm": 9.9,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -2.0
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -178,7 +178,7 @@
       "lat": 12.901,
       "lon": 80.2279,
       "predictive_risk": {
-        "score": 36.4,
+        "score": 36.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -192,9 +192,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 21.6,
         "forecast_24h_mm": 13.1,
-        "antecedent_72h_mm": 11.7,
+        "antecedent_72h_mm": 9.9,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -2.0
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -217,9 +217,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 25.3,
         "forecast_24h_mm": 14.6,
-        "antecedent_72h_mm": 9.9,
+        "antecedent_72h_mm": 9.8,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -2.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -228,7 +228,7 @@
       "lat": 13.0603,
       "lon": 80.2432,
       "predictive_risk": {
-        "score": 30.0,
+        "score": 29.9,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -242,9 +242,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 20.3,
         "forecast_24h_mm": 9.3,
-        "antecedent_72h_mm": 11.5,
+        "antecedent_72h_mm": 10.6,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.85
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -253,7 +253,7 @@
       "lat": 13.0732,
       "lon": 80.2609,
       "predictive_risk": {
-        "score": 28.0,
+        "score": 27.9,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -267,9 +267,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 20.3,
         "forecast_24h_mm": 9.3,
-        "antecedent_72h_mm": 11.5,
+        "antecedent_72h_mm": 10.6,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.85
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -292,9 +292,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 22.1,
         "forecast_24h_mm": 9.8,
-        "antecedent_72h_mm": 17.4,
+        "antecedent_72h_mm": 17.0,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.75
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -303,7 +303,7 @@
       "lat": 13.17,
       "lon": 80.26,
       "predictive_risk": {
-        "score": 31.2,
+        "score": 31.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -315,11 +315,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 19.3,
-        "forecast_24h_mm": 11.0,
-        "antecedent_72h_mm": 21.6,
+        "forecast_72h_mm": 19.0,
+        "forecast_24h_mm": 10.7,
+        "antecedent_72h_mm": 21.8,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -1.55
+        "trend_3h_mm_per_hr": -0.05
       }
     }
   ]
