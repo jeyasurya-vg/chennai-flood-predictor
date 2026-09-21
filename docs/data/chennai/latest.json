@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-21T06:15:29.341308+00:00",
+  "generated_at": "2026-09-21T14:01:14.175446+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 12.9756,
       "lon": 80.2207,
       "predictive_risk": {
-        "score": 42.6,
+        "score": 43.7,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,15 +36,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 28.5,
+        "score": 32.8,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 10.2,
-        "forecast_24h_mm": 7.5,
-        "antecedent_72h_mm": 17.6,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 15.2,
+        "forecast_24h_mm": 10.2,
+        "antecedent_72h_mm": 17.1,
+        "current_hour_mm": 1.9,
+        "trend_3h_mm_per_hr": 0.95
       }
     },
     {
@@ -52,81 +52,6 @@
       "ward_name": "Mudichur",
       "lat": 12.9214,
       "lon": 80.1216,
-      "predictive_risk": {
-        "score": 38.6,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
-      },
-      "realtime_severity": {
-        "score": 25.5,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 9.6,
-        "forecast_24h_mm": 6.6,
-        "antecedent_72h_mm": 18.4,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-03",
-      "ward_name": "Kotturpuram",
-      "lat": 13.021,
-      "lon": 80.2437,
-      "predictive_risk": {
-        "score": 35.9,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 5.2,
-        "antecedent_72h_mm": 17.5,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-04",
-      "ward_name": "Saidapet",
-      "lat": 13.021,
-      "lon": 80.2226,
-      "predictive_risk": {
-        "score": 35.9,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 5.2,
-        "antecedent_72h_mm": 17.5,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-05",
-      "ward_name": "Pallikaranai",
-      "lat": 12.94,
-      "lon": 80.2144,
       "predictive_risk": {
         "score": 40.6,
         "band": "moderate",
@@ -136,15 +61,90 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 27.0,
+        "score": 29.5,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 10.2,
-        "forecast_24h_mm": 7.5,
-        "antecedent_72h_mm": 17.6,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 18.6,
+        "forecast_24h_mm": 11.6,
+        "antecedent_72h_mm": 18.3,
+        "current_hour_mm": 1.8,
+        "trend_3h_mm_per_hr": 0.9
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-03",
+      "ward_name": "Kotturpuram",
+      "lat": 13.021,
+      "lon": 80.2437,
+      "predictive_risk": {
+        "score": 36.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 24.4,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 11.7,
+        "forecast_24h_mm": 7.6,
+        "antecedent_72h_mm": 17.3,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.1
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-04",
+      "ward_name": "Saidapet",
+      "lat": 13.021,
+      "lon": 80.2226,
+      "predictive_risk": {
+        "score": 36.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 24.4,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 11.7,
+        "forecast_24h_mm": 7.6,
+        "antecedent_72h_mm": 17.3,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.1
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-05",
+      "ward_name": "Pallikaranai",
+      "lat": 12.94,
+      "lon": 80.2144,
+      "predictive_risk": {
+        "score": 41.7,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 31.3,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 15.2,
+        "forecast_24h_mm": 10.2,
+        "antecedent_72h_mm": 17.1,
+        "current_hour_mm": 1.9,
+        "trend_3h_mm_per_hr": 0.95
       }
     },
     {
@@ -153,7 +153,7 @@
       "lat": 12.9166,
       "lon": 80.1892,
       "predictive_risk": {
-        "score": 32.8,
+        "score": 33.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -161,15 +161,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 21.0,
-        "band": "low"
+        "score": 26.2,
+        "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 13.2,
-        "forecast_24h_mm": 10.7,
-        "antecedent_72h_mm": 13.7,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 17.1,
+        "forecast_24h_mm": 12.1,
+        "antecedent_72h_mm": 13.5,
+        "current_hour_mm": 2.3,
+        "trend_3h_mm_per_hr": 1.15
       }
     },
     {
@@ -178,7 +178,7 @@
       "lat": 12.901,
       "lon": 80.2279,
       "predictive_risk": {
-        "score": 34.8,
+        "score": 35.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -186,15 +186,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.5,
-        "band": "low"
+        "score": 27.7,
+        "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 13.2,
-        "forecast_24h_mm": 10.7,
-        "antecedent_72h_mm": 13.7,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 17.1,
+        "forecast_24h_mm": 12.1,
+        "antecedent_72h_mm": 13.5,
+        "current_hour_mm": 2.3,
+        "trend_3h_mm_per_hr": 1.15
       }
     },
     {
@@ -202,6 +202,81 @@
       "ward_name": "Perungalathur",
       "lat": 12.8998,
       "lon": 80.0965,
+      "predictive_risk": {
+        "score": 32.6,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 23.5,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 18.6,
+        "forecast_24h_mm": 11.6,
+        "antecedent_72h_mm": 18.3,
+        "current_hour_mm": 1.8,
+        "trend_3h_mm_per_hr": 0.9
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-09",
+      "ward_name": "Nungambakkam",
+      "lat": 13.0603,
+      "lon": 80.2432,
+      "predictive_risk": {
+        "score": 28.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 18.4,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 11.7,
+        "forecast_24h_mm": 7.6,
+        "antecedent_72h_mm": 17.3,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.1
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-10",
+      "ward_name": "Egmore",
+      "lat": 13.0732,
+      "lon": 80.2609,
+      "predictive_risk": {
+        "score": 26.9,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 17.0,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 11.7,
+        "forecast_24h_mm": 7.6,
+        "antecedent_72h_mm": 17.3,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.1
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-11",
+      "ward_name": "Vyasarpadi",
+      "lat": 13.1167,
+      "lon": 80.25,
       "predictive_risk": {
         "score": 30.6,
         "band": "moderate",
@@ -215,84 +290,9 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 9.6,
-        "forecast_24h_mm": 6.6,
-        "antecedent_72h_mm": 18.4,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-09",
-      "ward_name": "Nungambakkam",
-      "lat": 13.0603,
-      "lon": 80.2432,
-      "predictive_risk": {
-        "score": 27.9,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 18.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 11.6,
+        "forecast_72h_mm": 8.8,
         "forecast_24h_mm": 5.2,
-        "antecedent_72h_mm": 17.5,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-10",
-      "ward_name": "Egmore",
-      "lat": 13.0732,
-      "lon": 80.2609,
-      "predictive_risk": {
-        "score": 25.9,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 16.5,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 5.2,
-        "antecedent_72h_mm": 17.5,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-11",
-      "ward_name": "Vyasarpadi",
-      "lat": 13.1167,
-      "lon": 80.25,
-      "predictive_risk": {
-        "score": 31.8,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
-      },
-      "realtime_severity": {
-        "score": 19.5,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 14.3,
-        "forecast_24h_mm": 3.9,
-        "antecedent_72h_mm": 19.8,
+        "antecedent_72h_mm": 19.7,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -303,20 +303,20 @@
       "lat": 13.17,
       "lon": 80.26,
       "predictive_risk": {
-        "score": 28.0,
+        "score": 28.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
         "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.6,
-        "forecast_24h_mm": 4.2,
+        "forecast_72h_mm": 9.2,
+        "forecast_24h_mm": 4.7,
         "antecedent_72h_mm": 18.5,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
