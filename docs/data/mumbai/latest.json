@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-23T00:27:36.621128+00:00",
+  "generated_at": "2026-09-23T05:56:49.909310+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,62 @@
   "scoring_config_source": "default",
   "wards": [
     {
+      "ward_id": "PLACEHOLDER-MUM-05",
+      "ward_name": "Kurla West",
+      "lat": 19.0728,
+      "lon": 72.8826,
+      "predictive_risk": {
+        "score": 36.4,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 24.1,
+        "band": "low"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 8.1,
+        "forecast_24h_mm": 2.1,
+        "antecedent_72h_mm": 19.5,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
+    {
+      "ward_id": "PLACEHOLDER-MUM-06",
+      "ward_name": "Dharavi",
+      "lat": 19.038,
+      "lon": 72.8538,
+      "predictive_risk": {
+        "score": 39.0,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+      },
+      "realtime_severity": {
+        "score": 25.5,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 9.7,
+        "forecast_24h_mm": 2.4,
+        "antecedent_72h_mm": 21.4,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": -0.3
+      }
+    },
+    {
       "ward_id": "PLACEHOLDER-MUM-07",
       "ward_name": "King's Circle (Matunga)",
       "lat": 19.027,
       "lon": 72.857,
       "predictive_risk": {
-        "score": 35.1,
+        "score": 35.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,11 +90,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.0,
-        "forecast_24h_mm": 3.7,
-        "antecedent_72h_mm": 20.1,
+        "forecast_72h_mm": 9.7,
+        "forecast_24h_mm": 2.4,
+        "antecedent_72h_mm": 21.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": -0.3
       }
     },
     {
@@ -53,7 +103,7 @@
       "lat": 19.0522,
       "lon": 72.8994,
       "predictive_risk": {
-        "score": 31.1,
+        "score": 31.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,11 +115,11 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 11.0,
-        "forecast_24h_mm": 3.7,
-        "antecedent_72h_mm": 20.1,
+        "forecast_72h_mm": 9.7,
+        "forecast_24h_mm": 2.4,
+        "antecedent_72h_mm": 21.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "trend_3h_mm_per_hr": -0.3
       }
     },
     {
@@ -86,15 +136,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.5,
+        "score": 22.8,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 7.2,
-        "forecast_24h_mm": 2.4,
-        "antecedent_72h_mm": 14.9,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 6.9,
+        "forecast_24h_mm": 2.1,
+        "antecedent_72h_mm": 15.2,
+        "current_hour_mm": 0.2,
+        "trend_3h_mm_per_hr": 0.05
       }
     },
     {
@@ -111,15 +161,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 18.0,
+        "score": 18.7,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 7.5,
-        "forecast_24h_mm": 4.2,
-        "antecedent_72h_mm": 15.2,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "forecast_72h_mm": 6.7,
+        "forecast_24h_mm": 3.4,
+        "antecedent_72h_mm": 16.0,
+        "current_hour_mm": 0.4,
+        "trend_3h_mm_per_hr": 0.1
       }
     }
   ]
