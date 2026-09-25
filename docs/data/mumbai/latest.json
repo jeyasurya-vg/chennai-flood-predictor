@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-25T07:44:24.912881+00:00",
+  "generated_at": "2026-09-25T13:43:21.368155+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.0176,
       "lon": 72.841,
       "predictive_risk": {
-        "score": 40.7,
+        "score": 40.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,24 +36,24 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 30.5,
+        "score": 28.6,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 3.7,
-        "forecast_24h_mm": 1.7,
-        "antecedent_72h_mm": 16.4,
-        "current_hour_mm": 0.9,
-        "trend_3h_mm_per_hr": 0.45
+        "forecast_72h_mm": 2.3,
+        "forecast_24h_mm": 0.4,
+        "antecedent_72h_mm": 13.4,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.15
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-02",
-      "ward_name": "Milan Subway (Santacruz)",
-      "lat": 19.0825,
-      "lon": 72.842,
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
       "predictive_risk": {
-        "score": 40.2,
+        "score": 28.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -61,15 +61,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 29.4,
-        "band": "moderate"
+        "score": 19.6,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 2.6,
-        "forecast_24h_mm": 1.4,
-        "antecedent_72h_mm": 13.7,
-        "current_hour_mm": 0.4,
-        "trend_3h_mm_per_hr": 0.2
+        "forecast_72h_mm": 2.3,
+        "forecast_24h_mm": 0.4,
+        "antecedent_72h_mm": 13.4,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": -0.15
       }
     },
     {
@@ -78,23 +78,23 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 32.2,
+        "score": 31.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 24.3,
+        "score": 22.6,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 1.8,
-        "forecast_24h_mm": 1.2,
-        "antecedent_72h_mm": 13.4,
-        "current_hour_mm": 0.8,
-        "trend_3h_mm_per_hr": 0.4
+        "forecast_72h_mm": 1.4,
+        "forecast_24h_mm": 0.3,
+        "antecedent_72h_mm": 10.5,
+        "current_hour_mm": 0.1,
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -103,23 +103,23 @@
       "lat": 19.2003,
       "lon": 72.8526,
       "predictive_risk": {
-        "score": 26.4,
+        "score": 25.8,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 18.4,
+        "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 1.8,
-        "forecast_24h_mm": 0.5,
-        "antecedent_72h_mm": 16.5,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": 0.1
+        "forecast_72h_mm": 0.6,
+        "forecast_24h_mm": 0.2,
+        "antecedent_72h_mm": 12.4,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
       }
     }
   ]
