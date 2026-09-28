@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-09-27T22:06:22.697990+00:00",
+  "generated_at": "2026-09-28T00:43:35.598226+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.0176,
       "lon": 72.841,
       "predictive_risk": {
-        "score": 40.2,
+        "score": 39.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,20 +40,20 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 8.7,
-        "forecast_24h_mm": 2.1,
+        "forecast_72h_mm": 4.3,
+        "forecast_24h_mm": 1.6,
         "antecedent_72h_mm": 7.6,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-02",
-      "ward_name": "Milan Subway (Santacruz)",
-      "lat": 19.0825,
-      "lon": 72.842,
+      "ward_id": "PLACEHOLDER-MUM-08",
+      "ward_name": "Gandhi Market (Chembur)",
+      "lat": 19.0522,
+      "lon": 72.8994,
       "predictive_risk": {
-        "score": 39.9,
+        "score": 27.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -61,13 +61,13 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 28.5,
-        "band": "moderate"
+        "score": 19.5,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 8.4,
-        "forecast_24h_mm": 1.8,
-        "antecedent_72h_mm": 6.2,
+        "forecast_72h_mm": 4.3,
+        "forecast_24h_mm": 1.6,
+        "antecedent_72h_mm": 7.6,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -90,8 +90,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 12.7,
-        "forecast_24h_mm": 4.1,
+        "forecast_72h_mm": 13.0,
+        "forecast_24h_mm": 3.6,
         "antecedent_72h_mm": 5.2,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -103,20 +103,20 @@
       "lat": 19.2003,
       "lon": 72.8526,
       "predictive_risk": {
-        "score": 25.3,
+        "score": 26.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
         "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 4.5,
-        "forecast_24h_mm": 1.2,
+        "forecast_72h_mm": 6.6,
+        "forecast_24h_mm": 1.1,
         "antecedent_72h_mm": 4.9,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
