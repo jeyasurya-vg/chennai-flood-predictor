@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-04T00:35:19.202412+00:00",
+  "generated_at": "2026-10-04T06:50:11.478546+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -53,7 +53,7 @@
       "lat": 19.0825,
       "lon": 72.842,
       "predictive_risk": {
-        "score": 38.4,
+        "score": 38.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,20 +65,20 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.1,
-        "forecast_24h_mm": 0,
+        "forecast_72h_mm": 0.3,
+        "forecast_24h_mm": 0.3,
         "antecedent_72h_mm": 3.0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-09",
-      "ward_name": "Malad Subway",
-      "lat": 19.1863,
-      "lon": 72.8493,
+      "ward_id": "PLACEHOLDER-MUM-03",
+      "ward_name": "Andheri Subway",
+      "lat": 19.1197,
+      "lon": 72.8468,
       "predictive_risk": {
-        "score": 30.2,
+        "score": 36.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -86,13 +86,13 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.5,
-        "band": "low"
+        "score": 27.0,
+        "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.1,
-        "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 1.0,
+        "forecast_72h_mm": 0.3,
+        "forecast_24h_mm": 0.3,
+        "antecedent_72h_mm": 3.0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
