@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-07T23:04:08.205554+00:00",
+  "generated_at": "2026-10-08T02:42:42.953884+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-01",
-      "ward_name": "Hindmata (Dadar/Parel)",
-      "lat": 19.0176,
-      "lon": 72.841,
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
       "predictive_risk": {
-        "score": 38.7,
+        "score": 30.7,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,12 +36,12 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 28.5,
-        "band": "moderate"
+        "score": 22.5,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.8,
-        "forecast_24h_mm": 0.7,
+        "forecast_72h_mm": 0.9,
+        "forecast_24h_mm": 0.9,
         "antecedent_72h_mm": 3.7,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -65,8 +65,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.8,
-        "forecast_24h_mm": 0.7,
+        "forecast_72h_mm": 0.9,
+        "forecast_24h_mm": 0.9,
         "antecedent_72h_mm": 3.7,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -78,7 +78,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 30.3,
+        "score": 30.6,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,8 +90,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.8,
-        "forecast_24h_mm": 0.7,
+        "forecast_72h_mm": 2.4,
+        "forecast_24h_mm": 0.2,
         "antecedent_72h_mm": 0.7,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
