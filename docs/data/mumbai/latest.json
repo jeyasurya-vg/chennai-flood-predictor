@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-09T19:32:46.270557+00:00",
+  "generated_at": "2026-10-10T00:01:55.006099+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-07",
-      "ward_name": "King's Circle (Matunga)",
-      "lat": 19.027,
-      "lon": 72.857,
+      "ward_id": "PLACEHOLDER-MUM-01",
+      "ward_name": "Hindmata (Dadar/Parel)",
+      "lat": 19.0176,
+      "lon": 72.841,
       "predictive_risk": {
-        "score": 30.7,
+        "score": 38.7,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,8 +36,8 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.5,
-        "band": "low"
+        "score": 28.5,
+        "band": "moderate"
       },
       "raw_inputs": {
         "forecast_72h_mm": 1.1,
