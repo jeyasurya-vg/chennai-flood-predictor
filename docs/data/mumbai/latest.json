@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-11T14:04:25.792761+00:00",
+  "generated_at": "2026-10-11T18:51:31.019618+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -22,31 +22,6 @@
   ],
   "scoring_config_source": "default",
   "wards": [
-    {
-      "ward_id": "PLACEHOLDER-MUM-05",
-      "ward_name": "Kurla West",
-      "lat": 19.0728,
-      "lon": 72.8826,
-      "predictive_risk": {
-        "score": 32.2,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 0,
-        "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 1.5,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
     {
       "ward_id": "PLACEHOLDER-MUM-06",
       "ward_name": "Dharavi",
@@ -67,7 +42,7 @@
       "raw_inputs": {
         "forecast_72h_mm": 0,
         "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 1.5,
+        "antecedent_72h_mm": 1.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -92,7 +67,7 @@
       "raw_inputs": {
         "forecast_72h_mm": 0,
         "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 1.5,
+        "antecedent_72h_mm": 1.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -117,7 +92,7 @@
       "raw_inputs": {
         "forecast_72h_mm": 0,
         "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 1.5,
+        "antecedent_72h_mm": 1.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
@@ -128,7 +103,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 30.2,
+        "score": 30.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -142,7 +117,7 @@
       "raw_inputs": {
         "forecast_72h_mm": 0,
         "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 1.2,
+        "antecedent_72h_mm": 0.7,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
