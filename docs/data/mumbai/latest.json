@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-19T01:14:20.089564+00:00",
+  "generated_at": "2026-10-19T07:44:12.955138+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.038,
       "lon": 72.8538,
       "predictive_risk": {
-        "score": 34.2,
+        "score": 34.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,8 +40,8 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.2,
-        "forecast_24h_mm": 0.2,
+        "forecast_72h_mm": 0.7,
+        "forecast_24h_mm": 0.7,
         "antecedent_72h_mm": 1.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -53,7 +53,7 @@
       "lat": 19.027,
       "lon": 72.857,
       "predictive_risk": {
-        "score": 30.2,
+        "score": 30.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -65,8 +65,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.2,
-        "forecast_24h_mm": 0.2,
+        "forecast_72h_mm": 0.7,
+        "forecast_24h_mm": 0.7,
         "antecedent_72h_mm": 1.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -78,7 +78,7 @@
       "lat": 19.0522,
       "lon": 72.8994,
       "predictive_risk": {
-        "score": 26.2,
+        "score": 26.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,8 +90,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.2,
-        "forecast_24h_mm": 0.2,
+        "forecast_72h_mm": 0.7,
+        "forecast_24h_mm": 0.7,
         "antecedent_72h_mm": 1.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -116,7 +116,7 @@
       },
       "raw_inputs": {
         "forecast_72h_mm": 0.8,
-        "forecast_24h_mm": 0.8,
+        "forecast_24h_mm": 0.4,
         "antecedent_72h_mm": 3.2,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
