@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-19T07:44:12.955138+00:00",
+  "generated_at": "2026-10-19T15:34:40.222674+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -23,12 +23,12 @@
   "scoring_config_source": "default",
   "wards": [
     {
-      "ward_id": "PLACEHOLDER-MUM-06",
-      "ward_name": "Dharavi",
-      "lat": 19.038,
-      "lon": 72.8538,
+      "ward_id": "PLACEHOLDER-MUM-01",
+      "ward_name": "Hindmata (Dadar/Parel)",
+      "lat": 19.0176,
+      "lon": 72.841,
       "predictive_risk": {
-        "score": 34.3,
+        "score": 38.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -36,37 +36,12 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 25.5,
+        "score": 28.5,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.7,
-        "forecast_24h_mm": 0.7,
-        "antecedent_72h_mm": 1.1,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-07",
-      "ward_name": "King's Circle (Matunga)",
-      "lat": 19.027,
-      "lon": 72.857,
-      "predictive_risk": {
-        "score": 30.3,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
-      },
-      "realtime_severity": {
-        "score": 22.5,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 0.7,
-        "forecast_24h_mm": 0.7,
+        "forecast_72h_mm": 0.4,
+        "forecast_24h_mm": 0.4,
         "antecedent_72h_mm": 1.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -78,7 +53,7 @@
       "lat": 19.0522,
       "lon": 72.8994,
       "predictive_risk": {
-        "score": 26.3,
+        "score": 26.2,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -90,8 +65,8 @@
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.7,
-        "forecast_24h_mm": 0.7,
+        "forecast_72h_mm": 0.4,
+        "forecast_24h_mm": 0.4,
         "antecedent_72h_mm": 1.1,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
@@ -103,7 +78,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 30.6,
+        "score": 30.5,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -111,15 +86,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.5,
+        "score": 23.2,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.8,
+        "forecast_72h_mm": 0.4,
         "forecast_24h_mm": 0.4,
         "antecedent_72h_mm": 3.2,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
+        "current_hour_mm": 0.3,
+        "trend_3h_mm_per_hr": 0.15
       }
     },
     {
@@ -132,16 +107,16 @@
         "band": "low",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
         "score": 18.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 0.1,
-        "forecast_24h_mm": 0.1,
+        "forecast_72h_mm": 0,
+        "forecast_24h_mm": 0,
         "antecedent_72h_mm": 2.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
