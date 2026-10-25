@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-25T16:06:51.944016+00:00",
+  "generated_at": "2026-10-25T19:02:33.490941+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -32,19 +32,19 @@
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 29.5,
+        "score": 30.0,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 6.8,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 48.5,
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 45.3,
         "current_hour_mm": 0.7,
-        "trend_3h_mm_per_hr": 0.05
+        "trend_3h_mm_per_hr": 0.3
       }
     },
     {
@@ -53,23 +53,23 @@
       "lat": 12.9214,
       "lon": 80.1216,
       "predictive_risk": {
-        "score": 41.0,
+        "score": 40.4,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 26.2,
+        "score": 26.7,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 4.8,
-        "forecast_24h_mm": 4.8,
-        "antecedent_72h_mm": 47.6,
+        "forecast_72h_mm": 3.9,
+        "forecast_24h_mm": 3.9,
+        "antecedent_72h_mm": 41.5,
         "current_hour_mm": 0.6,
-        "trend_3h_mm_per_hr": -0.15
+        "trend_3h_mm_per_hr": 0.2
       }
     },
     {
@@ -82,19 +82,19 @@
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 24.2,
-        "band": "low"
+        "score": 27.0,
+        "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 6.3,
-        "forecast_24h_mm": 6.3,
-        "antecedent_72h_mm": 47.5,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": -0.15
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 44.4,
+        "current_hour_mm": 1.4,
+        "trend_3h_mm_per_hr": 0.65
       }
     },
     {
@@ -107,19 +107,19 @@
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 24.2,
-        "band": "low"
+        "score": 27.0,
+        "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 6.3,
-        "forecast_24h_mm": 6.3,
-        "antecedent_72h_mm": 47.5,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": -0.15
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 44.4,
+        "current_hour_mm": 1.4,
+        "trend_3h_mm_per_hr": 0.65
       }
     },
     {
@@ -132,19 +132,19 @@
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 28.0,
+        "score": 28.5,
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 6.8,
-        "forecast_24h_mm": 6.8,
-        "antecedent_72h_mm": 48.5,
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 45.3,
         "current_hour_mm": 0.7,
-        "trend_3h_mm_per_hr": 0.05
+        "trend_3h_mm_per_hr": 0.3
       }
     },
     {
@@ -153,7 +153,7 @@
       "lat": 12.9166,
       "lon": 80.1892,
       "predictive_risk": {
-        "score": 36.0,
+        "score": 35.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -161,15 +161,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.5,
+        "score": 23.0,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 7.0,
-        "forecast_24h_mm": 7.0,
-        "antecedent_72h_mm": 48.7,
-        "current_hour_mm": 0.8,
-        "trend_3h_mm_per_hr": 0.25
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 43.6,
+        "current_hour_mm": 1.0,
+        "trend_3h_mm_per_hr": 0.4
       }
     },
     {
@@ -178,7 +178,7 @@
       "lat": 12.901,
       "lon": 80.2279,
       "predictive_risk": {
-        "score": 38.0,
+        "score": 37.1,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -186,15 +186,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 24.0,
+        "score": 24.5,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 7.0,
-        "forecast_24h_mm": 7.0,
-        "antecedent_72h_mm": 48.7,
-        "current_hour_mm": 0.8,
-        "trend_3h_mm_per_hr": 0.25
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 43.6,
+        "current_hour_mm": 1.0,
+        "trend_3h_mm_per_hr": 0.4
       }
     },
     {
@@ -203,23 +203,23 @@
       "lat": 12.8998,
       "lon": 80.0965,
       "predictive_risk": {
-        "score": 33.0,
+        "score": 32.4,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 20.2,
+        "score": 20.7,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 4.8,
-        "forecast_24h_mm": 4.8,
-        "antecedent_72h_mm": 47.6,
+        "forecast_72h_mm": 3.9,
+        "forecast_24h_mm": 3.9,
+        "antecedent_72h_mm": 41.5,
         "current_hour_mm": 0.6,
-        "trend_3h_mm_per_hr": -0.15
+        "trend_3h_mm_per_hr": 0.2
       }
     },
     {
@@ -232,19 +232,19 @@
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 18.2,
+        "score": 21.1,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 6.3,
-        "forecast_24h_mm": 6.3,
-        "antecedent_72h_mm": 47.5,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": -0.15
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 44.4,
+        "current_hour_mm": 1.4,
+        "trend_3h_mm_per_hr": 0.65
       }
     },
     {
@@ -257,19 +257,19 @@
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+        "rainfall_pattern": "convective_burst",
+        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 16.8,
+        "score": 19.6,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 6.3,
-        "forecast_24h_mm": 6.3,
-        "antecedent_72h_mm": 47.5,
-        "current_hour_mm": 0.2,
-        "trend_3h_mm_per_hr": -0.15
+        "forecast_72h_mm": 5.9,
+        "forecast_24h_mm": 5.9,
+        "antecedent_72h_mm": 44.4,
+        "current_hour_mm": 1.4,
+        "trend_3h_mm_per_hr": 0.65
       }
     },
     {
@@ -278,7 +278,7 @@
       "lat": 13.1167,
       "lon": 80.25,
       "predictive_risk": {
-        "score": 32.6,
+        "score": 32.4,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -286,15 +286,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 19.9,
+        "score": 20.3,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 5.0,
-        "forecast_24h_mm": 5.0,
-        "antecedent_72h_mm": 41.3,
-        "current_hour_mm": 0.3,
-        "trend_3h_mm_per_hr": -0.4
+        "forecast_72h_mm": 4.5,
+        "forecast_24h_mm": 4.5,
+        "antecedent_72h_mm": 40.3,
+        "current_hour_mm": 0.4,
+        "trend_3h_mm_per_hr": 0.15
       }
     },
     {
@@ -303,7 +303,7 @@
       "lat": 13.17,
       "lon": 80.26,
       "predictive_risk": {
-        "score": 29.2,
+        "score": 29.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -311,15 +311,15 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 18.6,
+        "score": 19.5,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 5.2,
-        "forecast_24h_mm": 5.2,
-        "antecedent_72h_mm": 33.5,
-        "current_hour_mm": 0.5,
-        "trend_3h_mm_per_hr": -0.2
+        "forecast_72h_mm": 4.5,
+        "forecast_24h_mm": 4.5,
+        "antecedent_72h_mm": 32.7,
+        "current_hour_mm": 0.7,
+        "trend_3h_mm_per_hr": 0.3
       }
     }
   ]
