@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-10-29T14:13:44.557121+00:00",
+  "generated_at": "2026-10-29T20:16:50.932687+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -28,7 +28,7 @@
       "lat": 19.0176,
       "lon": 72.841,
       "predictive_risk": {
-        "score": 38.3,
+        "score": 38.4,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -40,20 +40,20 @@
         "band": "moderate"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 1.4,
-        "forecast_24h_mm": 0.8,
+        "forecast_72h_mm": 1.9,
+        "forecast_24h_mm": 0.1,
         "antecedent_72h_mm": 0,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-02",
-      "ward_name": "Milan Subway (Santacruz)",
-      "lat": 19.0825,
-      "lon": 72.842,
+      "ward_id": "PLACEHOLDER-MUM-07",
+      "ward_name": "King's Circle (Matunga)",
+      "lat": 19.027,
+      "lon": 72.857,
       "predictive_risk": {
-        "score": 39.1,
+        "score": 30.3,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -61,15 +61,15 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 29.4,
-        "band": "moderate"
+        "score": 22.5,
+        "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 4.7,
-        "forecast_24h_mm": 3.2,
-        "antecedent_72h_mm": 0.6,
-        "current_hour_mm": 0.5,
-        "trend_3h_mm_per_hr": 0.15
+        "forecast_72h_mm": 1.4,
+        "forecast_24h_mm": 0.9,
+        "antecedent_72h_mm": 0,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -78,7 +78,7 @@
       "lat": 19.1863,
       "lon": 72.8493,
       "predictive_risk": {
-        "score": 30.9,
+        "score": 31.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -86,38 +86,13 @@
         "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
       },
       "realtime_severity": {
-        "score": 22.6,
+        "score": 22.5,
         "band": "low"
       },
       "raw_inputs": {
-        "forecast_72h_mm": 3.9,
-        "forecast_24h_mm": 2.0,
-        "antecedent_72h_mm": 0.3,
-        "current_hour_mm": 0.1,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-MUM-10",
-      "ward_name": "Hindustan Naka (Kandivali)",
-      "lat": 19.2003,
-      "lon": 72.8526,
-      "predictive_risk": {
-        "score": 24.8,
-        "band": "low",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "convective_burst",
-        "pattern_description": "Rain concentrated in a few intense hours (thunderstorm-driven)"
-      },
-      "realtime_severity": {
-        "score": 18.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 3.6,
-        "forecast_24h_mm": 1.6,
-        "antecedent_72h_mm": 0,
+        "forecast_72h_mm": 4.2,
+        "forecast_24h_mm": 2.2,
+        "antecedent_72h_mm": 0.4,
         "current_hour_mm": 0.0,
         "trend_3h_mm_per_hr": 0.0
       }
