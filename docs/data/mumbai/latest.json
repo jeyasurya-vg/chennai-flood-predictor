@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-11-04T17:12:29.589614+00:00",
+  "generated_at": "2026-11-04T23:38:09.174015+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -22,6 +22,31 @@
   ],
   "scoring_config_source": "default",
   "wards": [
+    {
+      "ward_id": "PLACEHOLDER-MUM-06",
+      "ward_name": "Dharavi",
+      "lat": 19.038,
+      "lon": 72.8538,
+      "predictive_risk": {
+        "score": 34.1,
+        "band": "moderate",
+        "confidence": "high",
+        "horizon_hours": 72,
+        "rainfall_pattern": "moderate_monsoon",
+        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
+      },
+      "realtime_severity": {
+        "score": 25.5,
+        "band": "moderate"
+      },
+      "raw_inputs": {
+        "forecast_72h_mm": 0,
+        "forecast_24h_mm": 0,
+        "antecedent_72h_mm": 0.4,
+        "current_hour_mm": 0.0,
+        "trend_3h_mm_per_hr": 0.0
+      }
+    },
     {
       "ward_id": "PLACEHOLDER-MUM-07",
       "ward_name": "King's Circle (Matunga)",
@@ -42,9 +67,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 0,
         "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 0.5,
+        "antecedent_72h_mm": 0.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
@@ -67,9 +92,9 @@
       "raw_inputs": {
         "forecast_72h_mm": 0,
         "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 0.5,
+        "antecedent_72h_mm": 0.4,
         "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": -0.05
+        "trend_3h_mm_per_hr": 0.0
       }
     },
     {
