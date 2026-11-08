@@ -6,7 +6,7 @@
     "lon": 72.87
   },
   "map_zoom": 11,
-  "generated_at": "2026-11-08T07:16:35.152920+00:00",
+  "generated_at": "2026-11-08T15:07:28.850313+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -73,12 +73,12 @@
       }
     },
     {
-      "ward_id": "PLACEHOLDER-MUM-03",
-      "ward_name": "Andheri Subway",
-      "lat": 19.1197,
-      "lon": 72.8468,
+      "ward_id": "PLACEHOLDER-MUM-09",
+      "ward_name": "Malad Subway",
+      "lat": 19.1863,
+      "lon": 72.8493,
       "predictive_risk": {
-        "score": 36.0,
+        "score": 30.0,
         "band": "moderate",
         "confidence": "high",
         "horizon_hours": 72,
@@ -86,8 +86,8 @@
         "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
       },
       "realtime_severity": {
-        "score": 27.0,
-        "band": "moderate"
+        "score": 22.5,
+        "band": "low"
       },
       "raw_inputs": {
         "forecast_72h_mm": 0,
