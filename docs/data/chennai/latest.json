@@ -6,7 +6,7 @@
     "lon": 80.2
   },
   "map_zoom": 11,
-  "generated_at": "2026-11-17T22:15:22.502811+00:00",
+  "generated_at": "2026-11-18T04:14:21.272554+00:00",
   "disclaimer": "Unofficial, independent project. NOT an official government warning system. For authoritative alerts, follow IMD, NDMA SACHET (sachet.ndma.gov.in), and your city's municipal / state disaster management authority channels. Scores are risk indicators, not evacuation orders.",
   "data_sources": [
     {
@@ -22,81 +22,6 @@
   ],
   "scoring_config_source": "default",
   "wards": [
-    {
-      "ward_id": "PLACEHOLDER-01",
-      "ward_name": "Velachery",
-      "lat": 12.9756,
-      "lon": 80.2207,
-      "predictive_risk": {
-        "score": 38.0,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 28.5,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 0,
-        "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 0,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-02",
-      "ward_name": "Mudichur",
-      "lat": 12.9214,
-      "lon": 80.1216,
-      "predictive_risk": {
-        "score": 34.0,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 25.5,
-        "band": "moderate"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 0,
-        "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 0.2,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
-    {
-      "ward_id": "PLACEHOLDER-03",
-      "ward_name": "Kotturpuram",
-      "lat": 13.021,
-      "lon": 80.2437,
-      "predictive_risk": {
-        "score": 32.0,
-        "band": "moderate",
-        "confidence": "high",
-        "horizon_hours": 72,
-        "rainfall_pattern": "moderate_monsoon",
-        "pattern_description": "Typical distributed monsoon rainfall, no sharp peak"
-      },
-      "realtime_severity": {
-        "score": 24.0,
-        "band": "low"
-      },
-      "raw_inputs": {
-        "forecast_72h_mm": 0,
-        "forecast_24h_mm": 0,
-        "antecedent_72h_mm": 0,
-        "current_hour_mm": 0.0,
-        "trend_3h_mm_per_hr": 0.0
-      }
-    },
     {
       "ward_id": "PLACEHOLDER-04",
       "ward_name": "Saidapet",
